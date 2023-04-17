@@ -1,6 +1,4 @@
-package function_c;
-
-import function_b.FunctionB;
+package Functions;
 
 public class FunctionC extends FunctionB{
 	//data members

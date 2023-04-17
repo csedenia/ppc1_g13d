@@ -1,4 +1,4 @@
-package function_b;
+package Functions;
 
 public class FunctionB {
 	//constants
