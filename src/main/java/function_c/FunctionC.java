@@ -19,6 +19,22 @@ public class FunctionC extends FunctionB{
 	
 	//reserve Cap_Labor and Cap_Grape to backorder before calculating product mix
 	public void reserve_backorder() {
+		int required_labor = 0;
+		int required_grape = 0;
+		
+		required_labor += lc_rose * Bko_Rose + lc_noir * Bko_Noir;
+		required_grape += gc_rose * Bko_Rose + gc_noir * Bko_Noir;
+		
+		if ((required_labor > Cap_Labor)||(required_grape > Cap_Grape)) {
+			return;
+		} else {
+			//resource sufficient to produce backorder, update Cap_Labor, Cap_Grape, Opt_Rose, Opt_Noir
+			Bko_fulfill = true;
+			Cap_Labor -= required_labor;
+			Cap_Grape -= required_grape;
+			Opt_Rose += Bko_Rose;
+			Opt_Noir += Bko_Noir;
+		}
 		return;
 	}
 }
