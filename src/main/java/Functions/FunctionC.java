@@ -8,11 +8,20 @@ public class FunctionC extends FunctionB{
 	//data member for output
 	private boolean Bko_fulfill = false;
 	
-	//constructor
+	//constructors
 	public FunctionC(int WeekOfYear, int Cap_Labor, int Cap_Grape, float Prc_Rose, float Prc_Noir, int Bko_Rose, int Bko_Noir){
 		super(WeekOfYear, Cap_Labor, Cap_Grape, Prc_Rose, Prc_Noir);
 		this.Bko_Rose = Bko_Rose;
 		this.Bko_Noir = Bko_Noir;
+	}
+	
+	//accessors
+	public int getBko_Rose() {
+		return Bko_Rose;
+	}
+	
+	public int getBko_Noir() {
+		return Bko_Noir;
 	}
 	
 	//reserve Cap_Labor and Cap_Grape to backorder before calculating product mix
@@ -34,5 +43,21 @@ public class FunctionC extends FunctionB{
 			Opt_Noir += Bko_Noir;
 		}
 		return;
+	}
+	
+	//reserve resources to backorder and update optimal mix
+	public void update_backorder() {
+		reserve_backorder();
+		update();
+	}
+	
+	//function for identifying abnormal situation
+	public boolean bko_ratio_valid() {
+		//check if backorder ratio is greater than 70% of the optimal production volume
+		if ((Bko_Rose + Bko_Noir) < (Opt_Rose + Opt_Noir)*0.7) {
+			return false;
+		}
+		
+		return true;
 	}
 }
