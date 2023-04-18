@@ -32,6 +32,7 @@ public class FunctionB {
 	}
 	
 	public void update() {
+		int max_revenue = 0;
 		for (int i = 0; i <= pc; i++) {
 			float revenue = 0; //temp revenue for each round
 			for (int j = 0; j <= pc; j++) {
@@ -41,8 +42,8 @@ public class FunctionB {
 				int totalGrape = (roseProduction * gc_rose) + (noirProduction * gc_noir);
 				if (totalLabor <= this.Cap_Labor && totalGrape <= this.Cap_Grape) { // pattern checking
 					revenue = (roseProduction * this.Prc_Rose) + (noirProduction * this.Prc_Noir);
-					if (revenue > Opt_Revenue) {// if yes, update all output data
-						Opt_Revenue = (int)revenue;
+					if (revenue > max_revenue) {// if yes, update all output data
+						max_revenue = (int)revenue;
 						Opt_Rose = i;
 						Opt_Noir = j;
 						Sur_Labor = this.Cap_Labor - (i*lc_rose + j*lc_noir);
@@ -57,6 +58,7 @@ public class FunctionB {
 				}
 			}
 		}
+		Opt_Revenue += max_revenue;
 	}
 	
 	public int getOpt_Revenue() {
