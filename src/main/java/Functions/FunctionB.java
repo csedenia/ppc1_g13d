@@ -65,6 +65,7 @@ public class FunctionB {
 		Opt_Noir += max_Noir;
 	}
 	
+	//accessors
 	public int getOpt_Revenue() {
 		return Opt_Revenue;
 	}
