@@ -103,4 +103,22 @@ public class FunctionB {
 					
 		return true;
 	}
+	
+	public boolean Sur_Labor_valid() {
+		//check if Sur_Labor is positive
+		if (Sur_Labor < 0) {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	public boolean Sur_Grape_valid() {
+		//check if Sur_Labor is positive
+		if (Sur_Grape < 0) {
+			return false;
+		}
+		
+		return true;
+	}
 }
