@@ -65,6 +65,7 @@ public class FunctionB {
 		Opt_Noir += max_Noir;
 	}
 	
+	//accessors
 	public int getOpt_Revenue() {
 		return Opt_Revenue;
 	}
@@ -101,6 +102,24 @@ public class FunctionB {
 			return false;
 		}
 					
+		return true;
+	}
+	
+	public boolean Sur_Labor_valid() {
+		//check if Sur_Labor is positive
+		if (Sur_Labor < 0) {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	public boolean Sur_Grape_valid() {
+		//check if Sur_Labor is positive
+		if (Sur_Grape < 0) {
+			return false;
+		}
+		
 		return true;
 	}
 }
