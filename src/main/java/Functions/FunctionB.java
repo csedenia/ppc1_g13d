@@ -31,7 +31,7 @@ public class FunctionB {
 		this.Prc_Noir = Prc_Noir;
 	}
 	
-	public int update() {
+	public void update() {
 		for (int i = 0; i <= pc; i++) {
 			float revenue = 0; //temp revenue for each round
 			for (int j = 0; j <= pc; j++) {
@@ -57,7 +57,6 @@ public class FunctionB {
 				}
 			}
 		}
-		return Opt_Revenue;
 	}
 	
 	public int getOpt_Revenue() {
