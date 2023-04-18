@@ -84,4 +84,23 @@ public class FunctionB {
 	public int getSur_Grape() {
 		return Sur_Grape;
 	}
+	
+	//functions for identifying abnormal situation
+	public boolean pc_valid() {
+		//check if actual pc > pc
+		if ((Opt_Rose + Opt_Noir) > pc) {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	public boolean grape_consumption_valid() {
+		//check if grape consumption > 90%
+		if (((gc_rose * Opt_Rose) + (gc_noir * Opt_Noir)) < (Cap_Grape * 0.9)) {
+			return false;
+		}
+					
+		return true;
+	}
 }
