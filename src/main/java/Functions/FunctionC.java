@@ -15,6 +15,15 @@ public class FunctionC extends FunctionB{
 		this.Bko_Noir = Bko_Noir;
 	}
 	
+	//accessors
+	public int getBko_Rose() {
+		return Bko_Rose;
+	}
+	
+	public int getBko_Noir() {
+		return Bko_Noir;
+	}
+	
 	//reserve Cap_Labor and Cap_Grape to backorder before calculating product mix
 	public void reserve_backorder() {
 		int required_labor = 0;
@@ -34,5 +43,21 @@ public class FunctionC extends FunctionB{
 			Opt_Noir += Bko_Noir;
 		}
 		return;
+	}
+	
+	//reserve resources to backorder and update optimal mix
+	public void update_backorder() {
+		reserve_backorder();
+		update();
+	}
+	
+	//function for identifying abnormal situation
+	public boolean bko_ratio_valid() {
+		//check if backorder ratio is greater than 70% of the optimal production volume
+		if ((Bko_Rose + Bko_Noir) < (Opt_Rose + Opt_Noir)*0.7) {
+			return false;
+		}
+		
+		return true;
 	}
 }
