@@ -16,12 +16,8 @@ public class FunctionC extends FunctionB{
 	}
 	
 	//accessors
-	public int getBko_Rose() {
-		return Bko_Rose;
-	}
-	
-	public int getBko_Noir() {
-		return Bko_Noir;
+	public boolean getBko_fulfill() {
+		return Bko_fulfill;
 	}
 	
 	//reserve Cap_Labor and Cap_Grape to backorder before calculating product mix
@@ -41,6 +37,7 @@ public class FunctionC extends FunctionB{
 			Cap_Grape -= required_grape;
 			Opt_Rose += Bko_Rose;
 			Opt_Noir += Bko_Noir;
+			Opt_Revenue += Bko_Rose * Prc_Rose + Bko_Noir * Prc_Noir;
 		}
 		return;
 	}
