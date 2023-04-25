@@ -91,7 +91,7 @@
     </MenuBar>
     <AnchorPane fx:id="label_col_heading2" maxHeight="-1.0" maxWidth="-1.0" prefHeight="519.0" prefWidth="788.0" VBox.vgrow="ALWAYS">
          <children>
-            <TextField fx:id="Num_Week" layoutX="222.0" layoutY="95.0" onInputMethodTextChanged="#getDefaultValue" prefHeight="25.0" prefWidth="99.0" promptText="Num_Week" />
+            <TextField fx:id="Num_Week" layoutX="222.0" layoutY="95.0" onInputMethodTextChanged="#getDefaultValue" prefHeight="25.0" prefWidth="99.0" promptText="WeekOfYear" />
             <Label fx:id="data_input_heading1" layoutX="143.0" layoutY="59.0" text="DATA INPUT" />
             <Label fx:id="data_input_caption2a" layoutX="133.0" layoutY="147.0" text="Labor (minutes)" />
             <Label fx:id="form_heading1" layoutX="258.0" layoutY="8.0" text="A2.2.B Weekly Review by Revenue ">
@@ -99,7 +99,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="data_input_caption1" layoutX="44.0" layoutY="99.0" text="Number of weeks (&lt;16):" />
+            <Label fx:id="data_input_caption1" layoutX="44.0" layoutY="99.0" text="Week of Year (weeks):" />
             <TextField fx:id="Cap_Labor" layoutX="222.0" layoutY="143.0" onInputMethodTextChanged="#getDefaultValue" prefHeight="25.0" prefWidth="99.0" promptText="Cap_Labor" />
             <Label fx:id="data_input_caption2" layoutX="43.0" layoutY="128.0" text="Capacity Of:" />
             <Label fx:id="data_input_caption2b" layoutX="154.0" layoutY="174.0" text="Grape (Kgs)" />
@@ -109,8 +109,6 @@
             <TextField fx:id="Prc_Rose" layoutX="221.0" layoutY="216.0" onInputMethodTextChanged="#getDefaultValue" prefHeight="25.0" prefWidth="99.0" promptText="Prc_Rose" />
             <Label fx:id="data_input_caption3b" layoutX="126.0" layoutY="248.0" text="P-Noir (A$/Litre)" />
             <TextField fx:id="Prc_Noir" layoutX="221.0" layoutY="244.0" onInputMethodTextChanged="#getDefaultValue" prefHeight="25.0" prefWidth="99.0" promptText="Prc_Noir" />
-            <Label fx:id="data_input_caption4" layoutX="41.0" layoutY="284.0" text="Total fixed costs of the year (A$): " />
-            <TextField fx:id="Fixed_Costs" layoutX="222.0" layoutY="281.0" onInputMethodTextChanged="#getDefaultValue" prefHeight="25.0" prefWidth="99.0" promptText="Fixed_Costs" />
             <Label fx:id="opt_result_heading1" layoutX="552.0" layoutY="59.0" text="OPTIMIZED RESULT" />
             <Button fx:id="button_run1" layoutX="357.0" layoutY="138.0" mnemonicParsing="false" onAction="#toclick" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: green;" text="RUN ==&gt;" textFill="#f2e538">
                <font>
@@ -120,7 +118,7 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <TextField fx:id="or_Prod_Vol_Rose" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="140.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
+            <TextField fx:id="or_Prod_Vol_Rose" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="129.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -131,10 +129,10 @@
                   <Cursor fx:constant="CROSSHAIR" />
                </cursor>
             </TextField>
-            <Label fx:id="opt_r_caption1" layoutX="487.0" layoutY="107.0" text="Production Volume (Litre)" />
-            <Label fx:id="opt_r_caption1a" layoutX="575.0" layoutY="142.0" text="Rose:" />
-            <Label fx:id="opt_r_caption1b" layoutX="575.0" layoutY="171.0" text="P-Noir:" />
-            <TextField fx:id="or_Prod_Vol_Noir" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="167.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
+            <Label fx:id="opt_r_caption1" layoutX="487.0" layoutY="96.0" text="Production Volume (Litre)" />
+            <Label fx:id="opt_r_caption1a" layoutX="575.0" layoutY="131.0" text="Rose:" />
+            <Label fx:id="opt_r_caption1b" layoutX="575.0" layoutY="160.0" text="P-Noir:" />
+            <TextField fx:id="or_Prod_Vol_Noir" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="156.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -142,8 +140,8 @@
                   <ColorAdjust />
                </effect>
             </TextField>
-            <Label fx:id="opt_r_caption1c" layoutX="575.0" layoutY="204.0" text="Total:" />
-            <TextField fx:id="or_Prod_Vol_Total" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="200.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
+            <Label fx:id="opt_r_caption1c" layoutX="575.0" layoutY="193.0" text="Total:" />
+            <TextField fx:id="or_Prod_Vol_Total" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="189.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -151,10 +149,10 @@
                   <ColorAdjust />
                </effect>
             </TextField>
-            <Line fx:id="HLine4" endX="100.0" layoutX="636.0" layoutY="196.0" startX="-61.0" />
-            <Label fx:id="opt_r_caption2" layoutX="484.0" layoutY="246.0" text="Total Gross Profit (A$):" />
-            <Label fx:id="opt_r_caption3" layoutX="486.0" layoutY="273.0" text="Profit Margin/Revenue (%):" />
-            <TextField fx:id="or_Gross_Profit" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="241.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
+            <Line fx:id="HLine4" endX="100.0" layoutX="636.0" layoutY="185.0" startX="-61.0" />
+            <Label fx:id="opt_r_caption2" layoutX="484.0" layoutY="235.0" text="Total Revenue (A$):" />
+            <Label fx:id="opt_r_caption3" layoutX="486.0" layoutY="262.0" text="Labor Surplus (minutes):" />
+            <TextField fx:id="or_Gross_Profit" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="230.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -162,7 +160,7 @@
                   <ColorAdjust />
                </effect>
             </TextField>
-            <TextField fx:id="or_Profit_Margin" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="269.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="99.99" style="-fx-background-color: grey;">
+            <TextField fx:id="or_Profit_Margin" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="258.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -178,6 +176,15 @@
             <Line fx:id="vLine3" endX="61.0" endY="-23.5" layoutX="335.0" layoutY="108.0" startX="61.0" startY="-60.0" />
             <Spinner fx:id="or_scroll_text1" layoutX="21.0" layoutY="358.0" prefHeight="137.0" prefWidth="744.0" />
             <Label fx:id="label_sysmsg1" layoutX="22.0" layoutY="341.0" text="System Messages / Warnings / Reminders" />
+            <Label fx:id="opt_r_caption31" layoutX="486.0" layoutY="290.0" text="Grape Surplus (Kgs):" />
+            <TextField fx:id="or_Profit_Margin1" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="286.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </TextField>
          </children>
     </AnchorPane>
       <TextField />
