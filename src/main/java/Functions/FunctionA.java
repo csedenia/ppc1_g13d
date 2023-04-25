@@ -5,7 +5,7 @@ public class FunctionA {
     int MAX_PRODUCTION_CAPACITY_WEEK = 5000;
     float STANDARD_MAN_POWER = 37.5f;
     float LABOUR_RATE_WEEK = 935;
-    float LABOUR_RATE = LABOUR_RATE_WEEK / (STANDARD_MAN_POWER * 60);
+    float LABOUR_RATE = LABOUR_RATE_WEEK / (STANDARD_MAN_POWER * 60); 
 
     //      input parameters       //
     private int numWeek;
@@ -53,22 +53,24 @@ public class FunctionA {
     }
 
     public void calculateGrossProfit() {
-        int maxGrossProfitWeek = 0;
-        for (int numRose = 0; numRose < this.MAX_PRODUCTION_CAPACITY_WEEK; numRose++) {
-            for (int numNoir = 0; numNoir < (this.MAX_PRODUCTION_CAPACITY_WEEK - numRose); numNoir++) {
-                float salesRevenue = numRose * this.priceRose + numNoir * this.priceNoir;
-                float vcl = ((numRose * 5) + (numNoir * 12)) * LABOUR_RATE;
-                int grossProfit = (int)(salesRevenue - vcl) - this.fixedCost;
-                if (grossProfit > maxGrossProfitWeek) {
-                    maxGrossProfitWeek = grossProfit;
+    	double maxProfitExcludeFixed = 0;
+        for (int numRose = 0; numRose <= this.MAX_PRODUCTION_CAPACITY_WEEK; numRose++) {
+            for (int numNoir = 0; numNoir <= (this.MAX_PRODUCTION_CAPACITY_WEEK - numRose); numNoir++) {
+                double salesRevenue = numRose * this.priceRose + numNoir * this.priceNoir;
+                double vcl = ((numRose * 5) + (numNoir * 12)) * LABOUR_RATE;
+                double profitExcludeFixed = salesRevenue - vcl;
+                if (profitExcludeFixed > maxProfitExcludeFixed) {
                     this.optimalRose = numRose;
                     this.optimalNoir = numNoir;
+                    maxProfitExcludeFixed = profitExcludeFixed;
+                    this.gpm = ((float)maxProfitExcludeFixed - this.fixedCost) / (float)salesRevenue * 100;
                 }
             }
         }
-
-        this.optimalGP = this.optimalRose * this.priceRose + this.optimalNoir * this.priceNoir;
-        this.gpm = maxGrossProfitWeek / this.optimalGP * 100;
+        
+        this.optimalGP = (int)(maxProfitExcludeFixed * this.numWeek - this.fixedCost);
+        this.optimalRose = this.optimalRose * this.numWeek;
+        this.optimalNoir = this.optimalNoir * this.numWeek;
 
         return;
     }
@@ -79,16 +81,17 @@ public class FunctionA {
 
         //      Situation A check      //
         if (annualCapacity < this.optimalRose + this.optimalNoir) {
-            System.out.println("w1: Insufficient production capacity to produce the" +
-                    "optimal mix, please reduce or adjust the capacity of labor & grape volume!");
+            System.out.println("w1: Insufficient production capacity to produce the optimal mix, please reduce or adjust the capacity of labor & grape volume!");
         }
 
         //      Situation B check      //
-        float consumptionGrapePercentage = (this.optimalRose + this.optimalNoir) / annualCapacity;
-        boolean isLessThan = (consumptionGrapePercentage < 0.9);
-        if (isLessThan) {
-            System.out.println("w2: Insufficient labor supplied to utilize the" +
-                    "grape resource (less than 90%)!");
+        float grapeSurplus = this.capGrape - (this.optimalRose * 6 + this.optimalNoir * 4);
+        if (grapeSurplus / this.capGrape >= 0.1) {
+            float labourSurplus = this.capLabor - (this.optimalRose * 5 + this.optimalNoir * 12);
+            System.out.println(labourSurplus);
+            if (labourSurplus < 0) {
+                System.out.println("w2: Insufficient labor supplied to utilize the grape resource (less than 90%)!");
+            }
         }
     }
 }
