@@ -10,7 +10,7 @@ public class FunctionA {
     float LABOUR_CONSUMPTION_ROSE_MIN = 5;
     float LABOUR_CONSUMPTION_NOIR_MIN = 12;
     float GRAPE_CONSUMPTION_ROSE_MIN = 6;
-    float GRAPE_CONSUMPTION_NOIR_MIN = 4; 
+    float GRAPE_CONSUMPTION_NOIR_MIN = 4;
 
     //      input parameters       //
     private int numWeek;
@@ -20,10 +20,6 @@ public class FunctionA {
     private float priceNoir;
     private int fixedCost;
     
-    // 		parameter inside 		//
-    private int capacityRose;
-    private int capacityNoir;
-
     //      output parameters       //
     private int optimalRose;
     private int optimalNoir;
@@ -44,8 +40,6 @@ public class FunctionA {
         this.optimalNoir = 0;
         this.optimalGP = 0f;
         this.gpm = 0f;
-        
-        findCapacity(this.capLabor, this.capGrape);
     }
 
     //      get functions       //
@@ -61,26 +55,12 @@ public class FunctionA {
     public float getGPM() {
         return this.gpm;
     }
-    public int getCapacityRose() {
-    	return this.capacityRose;
-    }
-    public int getCapacityNoir() {
-    	return this.capacityNoir;
-    }
     
-    
-    public void findCapacity(int capLabor, int capGrape) {
-    	float calculatedCapacityNoir = ((float)capGrape - ((float)capLabor * this.GRAPE_CONSUMPTION_ROSE_MIN / this.LABOUR_CONSUMPTION_ROSE_MIN)) / (this.GRAPE_CONSUMPTION_NOIR_MIN-this.LABOUR_CONSUMPTION_NOIR_MIN*this.GRAPE_CONSUMPTION_ROSE_MIN/this.LABOUR_CONSUMPTION_ROSE_MIN);	
-    	this.capacityNoir = (int)(calculatedCapacityNoir);
-    	float calculatedCapacityRose = 1/this.LABOUR_CONSUMPTION_ROSE_MIN * ((float)capLabor - this.LABOUR_CONSUMPTION_NOIR_MIN * calculatedCapacityNoir);
-    	this.capacityRose = (int)(calculatedCapacityRose);
-    }
-
 	public void calculateGrossProfit() {
-    	findCapacity(this.capLabor, this.capGrape);
-    	for (int numRose = 0; numRose <= this.capacityRose; numRose++) {
-	          for (int numNoir = 0; numNoir <= (this.capacityNoir); numNoir++) {
-	              float salesRevenue = numRose * this.priceRose + numNoir * this.priceNoir;
+		this.optimalGP = -1 * this.fixedCost;
+    	for (int numRose = 0; numRose <= this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek; numRose++) {
+	          for (int numNoir = 0; numNoir <= (this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek - numRose); numNoir++) {
+        		  float salesRevenue = numRose * this.priceRose + numNoir * this.priceNoir;
 	              float vcl = ((numRose * 5) + (numNoir * 12)) * LABOUR_RATE;
 	              int maxProfit = (int)(salesRevenue - vcl) - this.fixedCost;
 	              if (maxProfit > this.optimalGP) {
