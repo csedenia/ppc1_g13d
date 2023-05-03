@@ -23,7 +23,7 @@ public class FunctionA {
     //      output parameters       //
     private int optimalRose;
     private int optimalNoir;
-    private float optimalGP;
+    private int optimalGP;
     private float gpm;
 
 
@@ -38,7 +38,7 @@ public class FunctionA {
 
         this.optimalRose = 0;
         this.optimalNoir = 0;
-        this.optimalGP = 0f;
+        this.optimalGP = 0;
         this.gpm = 0f;
     }
 
@@ -49,7 +49,7 @@ public class FunctionA {
     public int getOptimalNoir() {
         return this.optimalNoir;
     }
-    public float getOptimalGP() {
+    public int getOptimalGP() {
         return this.optimalGP;
     }
     public float getGPM() {
