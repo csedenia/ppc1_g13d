@@ -29,7 +29,36 @@ public class FunctionC extends FunctionB{
 		required_grape += gc_rose * Bko_Rose + gc_noir * Bko_Noir;
 		
 		if ((required_labor > Cap_Labor)||(required_grape > Cap_Grape)) {
-			return;
+			//resource insufficient to produce all backorder, calculate optimal mix
+			int max_revenue = 0;
+			int opt_rose_bko = 0;
+			int opt_noir_bko = 0;
+			
+			for(int num_rose = 0; num_rose <= Bko_Rose; num_rose++) {
+				float temp_revenue = 0;
+				for(int num_noir = 0; num_noir <= Bko_Noir; num_noir++) {
+					if ((num_noir + num_rose) > pc) continue;
+					int totalLabor = (num_rose * lc_rose) + (num_noir * lc_noir);
+					int totalGrape = (num_rose * gc_rose) + (num_noir * gc_noir);
+					
+					if (totalLabor <= this.Cap_Labor && totalGrape <= this.Cap_Grape) { //check if the required labor and grape capacity are valid
+						temp_revenue = (num_rose * this.Prc_Rose) + (num_noir * this.Prc_Noir);
+						if (temp_revenue > max_revenue) {
+							max_revenue = (int)temp_revenue;
+							opt_rose_bko = num_rose;
+							opt_noir_bko = num_noir;
+						}
+					}
+				}
+			}
+			
+			//Bko_fulfill is false by default so no need to update
+			Opt_Rose += opt_rose_bko;
+			Opt_Noir += opt_noir_bko;
+			Opt_Revenue += max_revenue;
+			Cap_Labor -= ((opt_rose_bko * lc_rose) + (opt_noir_bko * lc_noir));
+			Cap_Grape -= ((opt_rose_bko * gc_rose) + (opt_noir_bko * gc_noir));
+			
 		} else {
 			//resource sufficient to produce backorder, update Cap_Labor, Cap_Grape, Opt_Rose, Opt_Noir
 			Bko_fulfill = true;
