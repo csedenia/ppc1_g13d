@@ -29,7 +29,11 @@ public class FunctionC extends FunctionB{
 		required_grape += gc_rose * Bko_Rose + gc_noir * Bko_Noir;
 		
 		if ((required_labor > Cap_Labor)||(required_grape > Cap_Grape)) {
+<<<<<<< HEAD
 			//resource insufficient to produce all backorder, calculate optimal mix
+=======
+			//resource insufficient to produce all backorder
+>>>>>>> 49ebc2ff7eb04bb0cb10e65cda4061a6ea924a1f
 			int max_revenue = 0;
 			int opt_rose_bko = 0;
 			int opt_noir_bko = 0;
@@ -37,7 +41,10 @@ public class FunctionC extends FunctionB{
 			for(int num_rose = 0; num_rose <= Bko_Rose; num_rose++) {
 				float temp_revenue = 0;
 				for(int num_noir = 0; num_noir <= Bko_Noir; num_noir++) {
+<<<<<<< HEAD
 					if ((num_noir + num_rose) > pc) continue;
+=======
+>>>>>>> 49ebc2ff7eb04bb0cb10e65cda4061a6ea924a1f
 					int totalLabor = (num_rose * lc_rose) + (num_noir * lc_noir);
 					int totalGrape = (num_rose * gc_rose) + (num_noir * gc_noir);
 					
@@ -60,7 +67,7 @@ public class FunctionC extends FunctionB{
 			Cap_Grape -= ((opt_rose_bko * gc_rose) + (opt_noir_bko * gc_noir));
 			
 		} else {
-			//resource sufficient to produce backorder, update Cap_Labor, Cap_Grape, Opt_Rose, Opt_Noir
+			//resource sufficient to produce all backorder, update Cap_Labor, Cap_Grape, Opt_Rose, Opt_Noir directly
 			Bko_fulfill = true;
 			Cap_Labor -= required_labor;
 			Cap_Grape -= required_grape;
