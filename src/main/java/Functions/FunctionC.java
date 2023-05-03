@@ -1,96 +1,179 @@
-package Functions;
+package src.main.java;
 
-public class FunctionC extends FunctionB{
-	//data members
-	private int Bko_Rose;
-	private int Bko_Noir;
-	
-	//data member for output
-	private boolean Bko_fulfill = false;
-	
-	//constructor
-	public FunctionC(int WeekOfYear, int Cap_Labor, int Cap_Grape, float Prc_Rose, float Prc_Noir, int Bko_Rose, int Bko_Noir){
-		super(WeekOfYear, Cap_Labor, Cap_Grape, Prc_Rose, Prc_Noir);
-		this.Bko_Rose = Bko_Rose;
-		this.Bko_Noir = Bko_Noir;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.input.InputMethodEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Line;
+
+public class functionAController {
+
+	@FXML
+	private TextField Cap_Grape;
+
+	@FXML
+	private TextField Cap_Labor;
+
+	@FXML
+	private TextField Fixed_Costs;
+
+	@FXML
+	private Line HLine2;
+
+	@FXML
+	private Line HLine3;
+
+	@FXML
+	private Line HLine4;
+
+	@FXML
+	private Line HLine_1;
+
+	@FXML
+	private TextField Num_Week;
+
+	@FXML
+	private TextField Prc_Noir;
+
+	@FXML
+	private TextField Prc_Rose;
+
+	@FXML
+	private Line VLine1;
+
+	@FXML
+	private Line VLine2;
+
+	@FXML
+	private Button button_exit1;
+
+	@FXML
+	private Button button_run1;
+
+	@FXML
+	private Label data_input_caption1;
+
+	@FXML
+	private Label data_input_caption2;
+
+	@FXML
+	private Label data_input_caption2a;
+
+	@FXML
+	private Label data_input_caption2b;
+
+	@FXML
+	private Label data_input_caption3;
+
+	@FXML
+	private Label data_input_caption3a;
+
+	@FXML
+	private Label data_input_caption3b;
+
+	@FXML
+	private Label data_input_caption4;
+
+	@FXML
+	private Label data_input_heading1;
+
+	@FXML
+	private Label form_heading1;
+
+	@FXML
+	private AnchorPane label_col_heading2;
+
+	@FXML
+	private Label label_sysmsg1;
+
+	@FXML
+	private Label opt_r_caption1;
+
+	@FXML
+	private Label opt_r_caption1a;
+
+	@FXML
+	private Label opt_r_caption1b;
+
+	@FXML
+	private Label opt_r_caption1c;
+
+	@FXML
+	private Label opt_r_caption2;
+
+	@FXML
+	private Label opt_r_caption3;
+
+	@FXML
+	private Label opt_result_heading1;
+
+	@FXML
+	private TextField or_Gross_Profit;
+
+	@FXML
+	private TextField or_Prod_Vol_Noir;
+
+	@FXML
+	private TextField or_Prod_Vol_Rose;
+
+	@FXML
+	private TextField or_Prod_Vol_Total;
+
+	@FXML
+	private TextField or_Profit_Margin;
+
+	@FXML
+	private Spinner<String> or_scroll_text1;
+
+	@FXML
+	private Line vLine3;
+
+	@FXML
+	void buttonpressed(ActionEvent event) {
+
 	}
-	
-	//accessors
-	public boolean getBko_fulfill() {
-		return Bko_fulfill;
-	}
-	
-	//reserve Cap_Labor and Cap_Grape to backorder before calculating product mix
-	public void reserve_backorder() {
-		int required_labor = 0;
-		int required_grape = 0;
-		
-		required_labor += lc_rose * Bko_Rose + lc_noir * Bko_Noir;
-		required_grape += gc_rose * Bko_Rose + gc_noir * Bko_Noir;
-		
-		if ((required_labor > Cap_Labor)||(required_grape > Cap_Grape)) {
-<<<<<<< HEAD
-			//resource insufficient to produce all backorder, calculate optimal mix
-=======
-			//resource insufficient to produce all backorder
->>>>>>> 49ebc2ff7eb04bb0cb10e65cda4061a6ea924a1f
-			int max_revenue = 0;
-			int opt_rose_bko = 0;
-			int opt_noir_bko = 0;
-			
-			for(int num_rose = 0; num_rose <= Bko_Rose; num_rose++) {
-				float temp_revenue = 0;
-				for(int num_noir = 0; num_noir <= Bko_Noir; num_noir++) {
-<<<<<<< HEAD
-					if ((num_noir + num_rose) > pc) continue;
-=======
->>>>>>> 49ebc2ff7eb04bb0cb10e65cda4061a6ea924a1f
-					int totalLabor = (num_rose * lc_rose) + (num_noir * lc_noir);
-					int totalGrape = (num_rose * gc_rose) + (num_noir * gc_noir);
-					
-					if (totalLabor <= this.Cap_Labor && totalGrape <= this.Cap_Grape) { //check if the required labor and grape capacity are valid
-						temp_revenue = (num_rose * this.Prc_Rose) + (num_noir * this.Prc_Noir);
-						if (temp_revenue > max_revenue) {
-							max_revenue = (int)temp_revenue;
-							opt_rose_bko = num_rose;
-							opt_noir_bko = num_noir;
-						}
+	public void initialize() {
+		Num_Week.textProperty().addListener(new ChangeListener<String>() {
+			@Override
+			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+				try {
+					if (0 > Integer.parseInt(newValue) || 15 < Integer.parseInt(newValue)) {
+						Alert alert = new Alert(Alert.AlertType.INFORMATION);
+						alert.setTitle("error");
+						alert.setHeaderText("input error");
+						alert.setContentText("Please enter an integer greater than 0 and less than 15");
+						alert.showAndWait();
+						Num_Week.setText("");
+					} else {
+
 					}
+				} catch (NumberFormatException e) {
+					Alert alert = new Alert(Alert.AlertType.INFORMATION);
+					alert.setTitle("error");
+					alert.setHeaderText("input error");
+					alert.setContentText("Please enter the number greater than 0 and less than 15");
+					alert.showAndWait();
+					Num_Week.setText("");
 				}
 			}
-			
-			//Bko_fulfill is false by default so no need to update
-			Opt_Rose += opt_rose_bko;
-			Opt_Noir += opt_noir_bko;
-			Opt_Revenue += max_revenue;
-			Cap_Labor -= ((opt_rose_bko * lc_rose) + (opt_noir_bko * lc_noir));
-			Cap_Grape -= ((opt_rose_bko * gc_rose) + (opt_noir_bko * gc_noir));
-			
-		} else {
-			//resource sufficient to produce all backorder, update Cap_Labor, Cap_Grape, Opt_Rose, Opt_Noir directly
-			Bko_fulfill = true;
-			Cap_Labor -= required_labor;
-			Cap_Grape -= required_grape;
-			Opt_Rose += Bko_Rose;
-			Opt_Noir += Bko_Noir;
-			Opt_Revenue += Bko_Rose * Prc_Rose + Bko_Noir * Prc_Noir;
-		}
-		return;
+		});
 	}
-	
-	//reserve resources to backorder and update optimal mix
-	public void update_backorder() {
-		reserve_backorder();
-		update();
+	@FXML
+	private void getDefaultValue(InputMethodEvent event) {
+
+
 	}
-	
-	//function for identifying abnormal situation
-	public boolean bko_ratio_valid() {
-		//check if backorder ratio is greater than 70% of the optimal production volume
-		if ((Bko_Rose + Bko_Noir) < (Opt_Rose + Opt_Noir)*0.7) {
-			return false;
-		}
-		
-		return true;
+
+	public void toexit(ActionEvent actionEvent) {Main.stage.setScene(Main.scene);
+	}
+
+	public void toclick(ActionEvent actionEvent) {
+		ObservableList<String> items = FXCollections.observableArrayList("w1: Insufficient production capacity to produce the optimal mix, please reduce or adjust the capacity of labor & grape volume!", "W2: Insufficient labor supplied to utilize the grape resource (less than 90%).");
+		or_scroll_text1.setValueFactory(new SpinnerValueFactory.ListSpinnerValueFactory<String>(items));
 	}
 }
