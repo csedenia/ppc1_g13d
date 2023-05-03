@@ -69,7 +69,7 @@ public class functionCController {
     private Button button_exit1;
 
     @FXML
-    private TextField or_Prod_Vol_Rose;
+    private TextField Opt_Rose;
 
     @FXML
     private Label opt_r_caption1;
@@ -81,13 +81,13 @@ public class functionCController {
     private Label opt_r_caption1b;
 
     @FXML
-    private TextField or_Prod_Vol_Noir;
+    private TextField Opt_Noir;
 
     @FXML
     private Label opt_r_caption1c;
 
     @FXML
-    private TextField or_Prod_Vol_Total;
+    private TextField Opt_Total;
 
     @FXML
     private Line HLine4;
@@ -99,10 +99,10 @@ public class functionCController {
     private Label opt_r_caption3;
 
     @FXML
-    private TextField or_Gross_Profit;
+    private TextField Opt_Revenue;
 
     @FXML
-    private TextField or_Profit_Margin;
+    private TextField Bko_Fulfill;
 
     @FXML
     private Line HLine3;
@@ -232,15 +232,15 @@ public class functionCController {
     	c.update_backorder();
     	
     	//update labels to show output
-    	or_Prod_Vol_Rose.setText(Integer.toString(c.getOpt_Rose()));
-    	or_Prod_Vol_Noir.setText(Integer.toString(c.getOpt_Noir()));
-    	or_Prod_Vol_Total.setText(Integer.toString(c.getOpt_Rose()+c.getOpt_Noir()));
-    	or_Gross_Profit.setText(Integer.toString(c.getOpt_Revenue()));
+    	Opt_Rose.setText(Integer.toString(c.getOpt_Rose()));
+    	Opt_Noir.setText(Integer.toString(c.getOpt_Noir()));
+    	Opt_Total.setText(Integer.toString(c.getOpt_Rose()+c.getOpt_Noir()));
+    	Opt_Revenue.setText(Integer.toString(c.getOpt_Revenue()));
     	
     	if(c.getBko_fulfill() == false) {
-    		or_Profit_Margin.setText("No");
+    		Bko_Fulfill.setText("No");
     	} else {
-    		or_Profit_Margin.setText("Yes");
+    		Bko_Fulfill.setText("Yes");
     	}
     }
 
