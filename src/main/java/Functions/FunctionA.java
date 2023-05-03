@@ -73,24 +73,4 @@ public class FunctionA {
     	}
         return;
     }
-
-    public void checkAbnormalSituation() {
-        calculateGrossProfit();
-        int annualCapacity = this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek;
-
-        //      Situation A check      //
-        if (annualCapacity < this.optimalRose + this.optimalNoir) {
-            System.out.println("w1: Insufficient production capacity to produce the optimal mix, please reduce or adjust the capacity of labor & grape volume!");
-        }
-
-        //      Situation B check      //
-        float grapeSurplus = this.capGrape - (this.optimalRose * 6 + this.optimalNoir * 4);
-        if (grapeSurplus / this.capGrape >= 0.1) {
-            float labourSurplus = this.capLabor - (this.optimalRose * 5 + this.optimalNoir * 12);
-            System.out.println(labourSurplus);
-            if (labourSurplus < 0) {
-                System.out.println("w2: Insufficient labor supplied to utilize the grape resource (less than 90%)!");
-            }
-        }
-    }
 }
