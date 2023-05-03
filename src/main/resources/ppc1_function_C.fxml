@@ -177,10 +177,10 @@
             <Spinner fx:id="or_scroll_text1" layoutX="21.0" layoutY="358.0" prefHeight="137.0" prefWidth="744.0" />
             <Label fx:id="label_sysmsg1" layoutX="22.0" layoutY="341.0" text="System Messages / Warnings / Reminders" />
             <Label fx:id="data_input_caption2a1" layoutX="153.0" layoutY="261.0" text="Rose (Litre)" />
-            <TextField fx:id="Cap_Labor1" layoutX="222.0" layoutY="256.0" onInputMethodTextChanged="#getDefaultValue" prefHeight="25.0" prefWidth="99.0" promptText="Bko_Rose" />
+            <TextField fx:id="Bko_Rose" layoutX="222.0" layoutY="256.0" onInputMethodTextChanged="#getDefaultValue" prefHeight="25.0" prefWidth="99.0" promptText="Bko_Rose" />
             <Label fx:id="data_input_caption21" layoutX="43.0" layoutY="261.0" text="Backorder:" />
             <Label fx:id="data_input_caption2b1" layoutX="154.0" layoutY="287.0" text="Noir (Litre)" />
-            <TextField fx:id="Cap_Grape1" layoutX="222.0" layoutY="285.0" onInputMethodTextChanged="#getDefaultValue" prefHeight="25.0" prefWidth="99.0" promptText="Bko_Noir" />
+            <TextField fx:id="Bko_Noir" layoutX="222.0" layoutY="285.0" onInputMethodTextChanged="#getDefaultValue" prefHeight="25.0" prefWidth="99.0" promptText="Bko_Noir" />
          </children>
     </AnchorPane>
       <TextField />
