@@ -161,11 +161,6 @@ public class functionCController {
     	int br = 0;
     	int bn = 0;
     	
-    	//output variables
-    	int or = 0;
-    	int on = 0;
-    	int orev = 0;
-    	
     	String input = Num_Week.getText();
     	if (Input_checking.date_checking(input) == false) {	//check if Num_Week is valid
     		//Num_Week invalid, show error message
@@ -236,6 +231,17 @@ public class functionCController {
     	FunctionC c = new FunctionC(year, lc, gc, pr, pn, br, bn);
     	c.update_backorder();
     	
+    	//update labels to show output
+    	or_Prod_Vol_Rose.setText(Integer.toString(c.getOpt_Rose()));
+    	or_Prod_Vol_Noir.setText(Integer.toString(c.getOpt_Noir()));
+    	or_Prod_Vol_Total.setText(Integer.toString(c.getOpt_Rose()+c.getOpt_Noir()));
+    	or_Gross_Profit.setText(Integer.toString(c.getOpt_Revenue()));
+    	
+    	if(c.getBko_fulfill() == false) {
+    		or_Profit_Margin.setText("No");
+    	} else {
+    		or_Profit_Margin.setText("Yes");
+    	}
     }
 
     @FXML
