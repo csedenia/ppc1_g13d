@@ -144,7 +144,7 @@ public class functionBController {
 
     @FXML
     void toexit(ActionEvent event) {
-
+    	Main.stage.setScene(Main.scene);
     }
 
 }

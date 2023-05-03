@@ -153,7 +153,7 @@ public class functionCController {
 
     @FXML
     void toexit(ActionEvent event) {
-
+    	Main.stage.setScene(Main.scene);
     }
 
 }
