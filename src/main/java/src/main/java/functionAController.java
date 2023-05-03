@@ -247,5 +247,6 @@ public class functionAController {
         or_Prod_Vol_Noir.setText(Integer.toString(objectA.getOptimalNoir()));
         or_Prod_Vol_Rose.setText(Integer.toString(objectA.getOptimalRose()));
         or_Profit_Margin.setText(Float.toString(objectA.getGPM()));
+        or_Prod_Vol_Total.setText(Integer.toString(objectA.getOptimalNoir()) + Integer.toString(objectA.getOptimalRose()));
     }
 }

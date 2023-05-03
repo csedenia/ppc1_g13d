@@ -10,6 +10,8 @@ import javafx.scene.input.InputMethodEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Line;
 
+import Functions.*;
+
 public class functionBController {
 
     @FXML
@@ -109,7 +111,10 @@ public class functionBController {
     private Label opt_result_heading1;
 
     @FXML
-    private TextField or_Gross_Profit;
+    private TextField or_Grape_Surplus;
+
+    @FXML
+    private TextField or_Labor_Surplus;
 
     @FXML
     private TextField or_Prod_Vol_Noir;
@@ -121,10 +126,7 @@ public class functionBController {
     private TextField or_Prod_Vol_Total;
 
     @FXML
-    private TextField or_Profit_Margin;
-
-    @FXML
-    private TextField or_Profit_Margin1;
+    private TextField or_Total_Revenue;
 
     @FXML
     private Spinner<?> or_scroll_text1;
@@ -139,12 +141,77 @@ public class functionBController {
 
     @FXML
     void toclick(ActionEvent event) {
+        boolean input_valid = true;
 
+        //parameters for creating FunctionC Object
+        int year = 0;
+        int lc = 0;
+        int gc = 0;
+        float pr = 0f;
+        float pn = 0f;
+
+        String input = Num_Week.getText();
+        if (Input_checking.date_checking(input) == false) {	//check if Num_Week is valid
+            //Num_Week invalid, show error message
+            input_valid = false;
+        } else {
+            //Num_Week valid, convert into int
+            year = Integer.parseInt(input);
+        }
+
+        input = Cap_Labor.getText();
+        if (Input_checking.labor_capacity_checking(input) == false) {	//check if Cap_Labor is valid
+            //Cap_Labor invalid, show error message
+            input_valid = false;
+        } else {
+            //Cap_Labor valid, convert into int
+            lc = Integer.parseInt(input);
+        }
+
+        input = Cap_Grape.getText();
+        if (Input_checking.grape_capacity_checking(input) == false) {	//check if Cap_Labor is valid
+            //Cap_Grape invalid, show error message
+            input_valid = false;
+        } else {
+            //Cap_Labor valid, convert into int
+            gc = Integer.parseInt(input);
+        }
+
+        input = Prc_Rose.getText();
+        if (Input_checking.pr_checking(input) == false) {
+            //Prc_Rose invalid, show error message
+            input_valid = false;
+        } else {
+            //Prc_Rose valid, convert into float
+            pr = Float.parseFloat(input);
+        }
+
+        input = Prc_Noir.getText();
+        if(Input_checking.pn_checking(input) == false) {
+            //Prc_Noir invalid, show error message
+            input_valid = false;
+        } else {
+            //Prc_Noir valid, convert into float
+            pn = Float.parseFloat(input);
+        }
+
+        //terminate the process if any of the input is invalid
+        if(input_valid == false) return;
+
+        //create function objects to calculate optimal mix
+        FunctionB objectB = new FunctionB(year, lc, gc, pr, pn);
+        objectB.update();
+        or_Prod_Vol_Noir.setText(Integer.toString(objectB.getOpt_Noir()));
+        or_Prod_Vol_Rose.setText(Integer.toString(objectB.getOpt_Rose()));
+        or_Prod_Vol_Total.setText(Integer.toString(objectB.getOpt_Noir()) + Integer.toString(objectB.getOpt_Rose()));
+        or_Total_Revenue.setText(Integer.toString(objectB.getOpt_Revenue()));
+        or_Labor_Surplus.setText(Integer.toString(objectB.getSur_Labor()));
+        or_Grape_Surplus.setText(Integer.toString(objectB.getSur_Grape()));
     }
 
     @FXML
     void toexit(ActionEvent event) {
-    	Main.stage.setScene(Main.scene);
+        Main.stage.setScene(Main.scene);
     }
 
 }

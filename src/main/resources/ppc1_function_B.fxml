@@ -152,7 +152,7 @@
             <Line fx:id="HLine4" endX="100.0" layoutX="636.0" layoutY="185.0" startX="-61.0" />
             <Label fx:id="opt_r_caption2" layoutX="484.0" layoutY="235.0" text="Total Revenue (A$):" />
             <Label fx:id="opt_r_caption3" layoutX="486.0" layoutY="262.0" text="Labor Surplus (minutes):" />
-            <TextField fx:id="or_Gross_Profit" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="230.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
+            <TextField fx:id="or_Total_Revenue" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="230.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -160,7 +160,7 @@
                   <ColorAdjust />
                </effect>
             </TextField>
-            <TextField fx:id="or_Profit_Margin" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="258.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
+            <TextField fx:id="or_Labor_Surplus" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="258.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -177,7 +177,7 @@
             <Spinner fx:id="or_scroll_text1" layoutX="21.0" layoutY="358.0" prefHeight="137.0" prefWidth="744.0" />
             <Label fx:id="label_sysmsg1" layoutX="22.0" layoutY="341.0" text="System Messages / Warnings / Reminders" />
             <Label fx:id="opt_r_caption31" layoutX="486.0" layoutY="290.0" text="Grape Surplus (Kgs):" />
-            <TextField fx:id="or_Profit_Margin1" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="286.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
+            <TextField fx:id="or_Grape_Surplus" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="635.0" layoutY="286.0" opacity="0.84" prefHeight="25.0" prefWidth="99.0" promptText="999,999" style="-fx-background-color: grey;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
