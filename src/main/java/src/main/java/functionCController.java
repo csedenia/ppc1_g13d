@@ -69,7 +69,7 @@ public class functionCController {
     private Button button_exit1;
 
     @FXML
-    private TextField or_Prod_Vol_Rose;
+    private TextField Opt_Rose;
 
     @FXML
     private Label opt_r_caption1;
@@ -81,13 +81,13 @@ public class functionCController {
     private Label opt_r_caption1b;
 
     @FXML
-    private TextField or_Prod_Vol_Noir;
+    private TextField Opt_Noir;
 
     @FXML
     private Label opt_r_caption1c;
 
     @FXML
-    private TextField or_Prod_Vol_Total;
+    private TextField Opt_Total;
 
     @FXML
     private Line HLine4;
@@ -99,10 +99,10 @@ public class functionCController {
     private Label opt_r_caption3;
 
     @FXML
-    private TextField or_Gross_Profit;
+    private TextField Opt_Revenue;
 
     @FXML
-    private TextField or_Profit_Margin;
+    private TextField Bko_Fulfill;
 
     @FXML
     private Line HLine3;
@@ -160,11 +160,6 @@ public class functionCController {
     	float pn = 0f;
     	int br = 0;
     	int bn = 0;
-    	
-    	//output variables
-    	int or = 0;
-    	int on = 0;
-    	int orev = 0;
     	
     	String input = Num_Week.getText();
     	if (Input_checking.date_checking(input) == false) {	//check if Num_Week is valid
@@ -236,6 +231,17 @@ public class functionCController {
     	FunctionC c = new FunctionC(year, lc, gc, pr, pn, br, bn);
     	c.update_backorder();
     	
+    	//update labels to show output
+    	Opt_Rose.setText(Integer.toString(c.getOpt_Rose()));
+    	Opt_Noir.setText(Integer.toString(c.getOpt_Noir()));
+    	Opt_Total.setText(Integer.toString(c.getOpt_Rose()+c.getOpt_Noir()));
+    	Opt_Revenue.setText(Integer.toString(c.getOpt_Revenue()));
+    	
+    	if(c.getBko_fulfill() == false) {
+    		Bko_Fulfill.setText("No");
+    	} else {
+    		Bko_Fulfill.setText("Yes");
+    	}
     }
 
     @FXML
