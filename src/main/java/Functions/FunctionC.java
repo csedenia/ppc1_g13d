@@ -37,6 +37,7 @@ public class FunctionC extends FunctionB{
 			for(int num_rose = 0; num_rose <= Bko_Rose; num_rose++) {
 				float temp_revenue = 0;
 				for(int num_noir = 0; num_noir <= Bko_Noir; num_noir++) {
+					if ((num_noir + num_rose) > pc) continue;
 					int totalLabor = (num_rose * lc_rose) + (num_noir * lc_noir);
 					int totalGrape = (num_rose * gc_rose) + (num_noir * gc_noir);
 					
