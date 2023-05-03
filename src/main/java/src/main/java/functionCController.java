@@ -153,13 +153,18 @@ public class functionCController {
     	boolean input_valid = true;
     	
     	//parameters for creating FunctionC Object
-    	int year;
-    	int lc;
-    	int gc;
-    	float pr;
-    	float pn;
-    	int br;
-    	int bn;
+    	int year = 0;
+    	int lc = 0;
+    	int gc = 0;
+    	float pr = 0f;
+    	float pn = 0f;
+    	int br = 0;
+    	int bn = 0;
+    	
+    	//output variables
+    	int or = 0;
+    	int on = 0;
+    	int orev = 0;
     	
     	String input = Num_Week.getText();
     	if (Input_checking.date_checking(input) == false) {	//check if Num_Week is valid
@@ -224,12 +229,18 @@ public class functionCController {
     		bn = Integer.parseInt(input);
     	}
     	
+    	//terminate the process if any of the input is invalid
+    	if(input_valid == false) return;
+    	
+    	//create function objects to calculate optimal mix
+    	FunctionC c = new FunctionC(year, lc, gc, pr, pn, br, bn);
+    	c.update_backorder();
     	
     }
 
     @FXML
     void toexit(ActionEvent event) {
-
+    	Main.stage.setScene(Main.scene);
     }
 
 }
