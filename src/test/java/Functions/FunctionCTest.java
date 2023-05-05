@@ -18,9 +18,9 @@ public class FunctionCTest {
 	@Test
 	public void C02() {
 		FunctionC c = new FunctionC(2301, 72000, 45000, 12.5f, 23.5f, 3500, 2800);
-		c.update();
+		c.update_backorder();
 		
-		assertEquals(154116, c.getOpt_Revenue()); //calculated using ms excel solver
+		assertEquals(93300, c.getOpt_Revenue()); //calculated using ms excel solver
 	}
 
 	//custom test case for FunctionC.reserve_backorder()

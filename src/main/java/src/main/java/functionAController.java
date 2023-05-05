@@ -10,6 +10,9 @@ import javafx.scene.control.*;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Line;
+import java.text.DecimalFormat;
+
+import Functions.*;
 
 public class functionAController {
 
@@ -135,7 +138,6 @@ public class functionAController {
 
     @FXML
     void buttonpressed(ActionEvent event) {
-
     }
     public void initialize() {
         Num_Week.textProperty().addListener(new ChangeListener<String>() {
@@ -166,14 +168,103 @@ public class functionAController {
     @FXML
     private void getDefaultValue(InputMethodEvent event) {
 
-
     }
 
     public void toexit(ActionEvent actionEvent) {Main.stage.setScene(Main.scene);
     }
 
     public void toclick(ActionEvent actionEvent) {
-        ObservableList<String> items = FXCollections.observableArrayList("w1: Insufficient production capacity to produce the optimal mix, please reduce or adjust the capacity of labor & grape volume!", "W2: Insufficient labor supplied to utilize the grape resource (less than 90%).");
+
+        boolean input_valid = true;
+
+        int capLabour = 0;
+        int capGrape = 0;
+        int numWeek = 0;
+        float priceRose = 0f;
+        float priceNoir = 0f;
+        int fixedCost = 0;
+
+        String input = Cap_Labor.getText();
+        if (Input_checking.labor_capacity_checking(input) == false) {	//check if Cap_Labor is valid
+            //Cap_Labor invalid, show error message
+            input_valid = false;
+        } else {
+            //Cap_Labor valid, convert into int
+            capLabour = Integer.parseInt(input);
+        }
+
+        input = Cap_Grape.getText();
+        if (Input_checking.grape_capacity_checking(input) == false) {	//check if Cap_Grape is valid
+            //Cap_Grape invalid, show error message
+            input_valid = false;
+        } else {
+            //Cap_Grape valid, convert into int
+            capGrape = Integer.parseInt(input);
+        }
+
+        input = Num_Week.getText();
+        if (Input_checking.numweek_checking(input) == false) {	//check if Num_Week is valid
+            //Num_Week invalid, show error message
+            input_valid = false;
+        } else {
+            //Num_Week valid, convert into int
+            numWeek = Integer.parseInt(input);
+        }
+
+        input = Prc_Rose.getText();
+        if (Input_checking.pr_checking(input) == false) {	//check if Prc_Rose is valid
+            //Prc_Rose invalid, show error message
+            input_valid = false;
+        } else {
+            //Prc_Rose valid, convert into int
+            priceRose = Float.parseFloat(input);
+        }
+
+        input = Prc_Noir.getText();
+        if (Input_checking.pr_checking(input) == false) {	//check if Prc_Noir is valid
+            //Prc_Noir invalid, show error message
+            input_valid = false;
+        } else {
+            //Prc_Noir valid, convert into int
+            priceNoir = Float.parseFloat(input);
+        }
+
+        input = Fixed_Costs.getText();
+        if (Input_checking.fixedCost_checking(input) == false) {	//check if Fixed_Costs is valid
+            //Fixed_Costs invalid, show error message
+            input_valid = false;
+        } else {
+            //Fixed_Costs valid, convert into int
+            fixedCost = Integer.parseInt(input);
+        }
+
+        if (input_valid == false) return;
+
+        FunctionA objectA = new FunctionA(numWeek, capLabour, capGrape, priceRose, priceNoir, fixedCost);
+        objectA.calculateGrossProfit();
+        or_Prod_Vol_Noir.setText(Integer.toString(objectA.getOptimalNoir()));
+        or_Prod_Vol_Rose.setText(Integer.toString(objectA.getOptimalRose()));
+        or_Prod_Vol_Total.setText(Integer.toString(objectA.getOptimalNoir()) + Integer.toString(objectA.getOptimalRose()));
+        DecimalFormat df = new DecimalFormat("0.0");
+        or_Gross_Profit.setText(Integer.toString(objectA.getOptimalGP()));
+        or_Profit_Margin.setText(df.format(objectA.getGPM()));
+        
+        //system warning message 
+        System_message warning_check= new System_message(objectA.getOptimalRose(), objectA.getOptimalNoir(), numWeek, capGrape, capLabour);
+
+        boolean hasW1 = warning_check.checkW1();
+        boolean hasW2 = warning_check.checkW2();
+
+        ObservableList<String> items = FXCollections.observableArrayList();
+
+        if(hasW1) {
+            items.add("w1: Insufficient production capacity to produce the optimal mix, please reduce or adjust the capacity of labor & grape volume!");
+        }
+
+        if(hasW2) {
+            items.add("W2: Insufficient labor supplied to utilize the grape resource (less than 90%).");
+        }
+
         or_scroll_text1.setValueFactory(new SpinnerValueFactory.ListSpinnerValueFactory<String>(items));
     }
 }
