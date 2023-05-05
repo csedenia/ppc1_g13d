@@ -83,7 +83,6 @@ public class FunctionC extends FunctionB{
 
 		} else {
 			//resource sufficient to produce backorder, update Cap_Labor, Cap_Grape, Opt_Rose, Opt_Noir
-			System.out.println("true");
 			Bko_fulfill = true;
 			Cap_Labor -= required_labor;
 			Cap_Grape -= required_grape;
