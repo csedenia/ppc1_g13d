@@ -26,7 +26,6 @@ public class FunctionCTest {
 	//custom test case for FunctionC.reserve_backorder()
 	@Test
 	public void reserve_backorder_typical0() {
-		System.out.println("start");
 		FunctionC c = new FunctionC(2301, 9999, 9999, 12.5f, 23.5f, 100, 100);
 		c.reserve_backorder();
 		
