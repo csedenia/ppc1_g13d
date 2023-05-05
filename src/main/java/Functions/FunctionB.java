@@ -1,3 +1,7 @@
+/**
+ * Program Code Function B
+ * @author Hardy, Fan Tsz Ho
+ */
 package Functions;
 
 public class FunctionB {
@@ -22,6 +26,14 @@ public class FunctionB {
 	private int Sur_Labor = 0;					//resource surplus of labor
 	private int Sur_Grape = 0;					//resource surplus of grape
 	
+	/**
+	 * Constructor for FunctionB
+	 * @param WeekOfYear	Number of weeks to be estimated for the harvest season in format of YYMM, e.g. 2301
+	 * @param Cap_Labor		Labor resource planned for the production cycle (in Minute)
+	 * @param Cap_Grape		Grape resource planned for the production cycle (in Kg)
+	 * @param Prc_Rose		Price of Rosé 
+	 * @param Prc_Noir		Price of P-Noir
+	 */
 	//constructor
 	public FunctionB(int WeekOfYear, int Cap_Labor, int Cap_Grape, float Prc_Rose, float Prc_Noir){
 		this.WeekOfYear = WeekOfYear;
@@ -31,6 +43,9 @@ public class FunctionB {
 		this.Prc_Noir = Prc_Noir;
 	}
 	
+	/**
+	 * Calculate optimal product mix with provided resources availability 
+	 */
 	public void update() {
 		int max_revenue = 0;
 		int max_Rose = 0;
@@ -66,27 +81,52 @@ public class FunctionB {
 	}
 	
 	//accessors
+	/**
+	 * Accessor for FunctionB.Opt_Revenue
+	 * @return FunctionB.Opt_Revenue
+	 */
 	public int getOpt_Revenue() {
 		return Opt_Revenue;
 	}
 	
+	/**
+	 * Accessor for FunctionB.Opt_Rose
+	 * @return FunctionB.Opt_Rose
+	 */
 	public int getOpt_Rose() {
 		return Opt_Rose;
 	}
 	
+	/**
+	 * Accessor for FunctionB.Opt_Noir
+	 * @return FunctionB.Opt_Noir
+	 */
 	public int getOpt_Noir() {
 		return Opt_Noir;
 	}
 	
+	/**
+	 * Accessor for FunctionB.getSur_Labor
+	 * @return FunctionB.getSur_Labor
+	 */
 	public int getSur_Labor() {
 		return Sur_Labor;
 	}
 	
+	/**
+	 * Accessor for FunctionB.getSur_Grape
+	 * @return FunctionB.getSur_Grape
+	 */
 	public int getSur_Grape() {
 		return Sur_Grape;
 	}
 	
 	//functions for identifying abnormal situation
+	/**
+	 * Function for Productivity Checking
+	 * Return false if actual production is greater than production capacity 
+	 * @return boolean value of actualPC > PC
+	 */
 	public boolean pc_valid() {
 		//check if actual pc > pc
 		if ((Opt_Rose + Opt_Noir) > pc) {
@@ -96,6 +136,11 @@ public class FunctionB {
 		return true;
 	}
 	
+	/**
+	 * Function for Grape Consumption Checking
+	 * Return false if Grape Consumption is less than 90% of the provided grape resource
+	 * @return boolean value of actualGC > 0.9* GC
+	 */
 	public boolean grape_consumption_valid() {
 		//check if grape consumption > 90%
 		if (((gc_rose * Opt_Rose) + (gc_noir * Opt_Noir)) < (Cap_Grape * 0.9)) {
@@ -105,6 +150,11 @@ public class FunctionB {
 		return true;
 	}
 	
+	/**
+	 * Function for Labor Surplus Checking
+	 * Return false if Labor Surplus is less than 0
+	 * @return boolean value of Sur_Labor > 0
+	 */
 	public boolean Sur_Labor_valid() {
 		//check if Sur_Labor is positive
 		if (Sur_Labor < 0) {
@@ -114,6 +164,11 @@ public class FunctionB {
 		return true;
 	}
 	
+	/**
+	 * Function for Grape Surplus Checking
+	 * Return false if Grape Surplus is less than 0
+	 * @return boolean value of Sur_Grape > 0
+	 */
 	public boolean Sur_Grape_valid() {
 		//check if Sur_Labor is positive
 		if (Sur_Grape < 0) {
