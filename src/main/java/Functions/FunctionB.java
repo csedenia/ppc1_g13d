@@ -50,9 +50,10 @@ public class FunctionB {
 		int max_revenue = 0;
 		int max_Rose = 0;
 		int max_Noir = 0;
-		for (int i = 0; i <= pc; i++) {
+		int bko_production = Opt_Rose + Opt_Noir;
+		for (int i = 0; i <= pc-bko_production; i++) {
 			float revenue = 0; //temp revenue for each round
-			for (int j = 0; j <= pc-i; j++) {
+			for (int j = 0; j <= pc-bko_production-i; j++) {
 				int roseProduction = i;
 				int noirProduction = j;
 				int totalLabor = (roseProduction * lc_rose) + (noirProduction * lc_noir);
