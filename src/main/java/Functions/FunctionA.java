@@ -1,3 +1,8 @@
+/**
+ * Program Code Function A
+ * @author Sasatorn Lohanakakul
+ */
+
 package Functions;
 
 public class FunctionA {
@@ -26,8 +31,15 @@ public class FunctionA {
     private int optimalGP;
     private float gpm;
 
-
-    //      constructor        //
+    /**
+     * Constructor for FunctionA
+     * @param numWeek			Number of weeks
+     * @param capLabor			Labor resource planned for the production cycle (in Minute)
+     * @param capGrape			Grape resource planned for the production cycle (in Kg)
+     * @param priceRose			Price of Rosé
+     * @param priceNoir			Price of P-Noir
+     * @param fixedCost			Fixed cost 
+     */
     public FunctionA(int numWeek, int capLabor, int capGrape, float priceRose, float priceNoir, int fixedCost) {
         this.numWeek = numWeek;
         this.capLabor = capLabor;
@@ -41,21 +53,42 @@ public class FunctionA {
         this.optimalGP = 0;
         this.gpm = 0f;
     }
-
-    //      get functions       //
+    
+    /**
+     * Accessor of FunctionA.optimalRose
+     * @return FunctionA.optimalRose
+     */
     public int getOptimalRose() {
         return this.optimalRose;
     }
+    
+    /**
+     * Accessor of FunctionA.optimalNoir
+     * @return FunctionA.optimalNoir
+     */
     public int getOptimalNoir() {
         return this.optimalNoir;
     }
+    
+    /**
+     * Accessor of FunctionA.optimalGP
+     * @return FunctionA.optimalGP
+     */
     public int getOptimalGP() {
         return this.optimalGP;
     }
+    
+    /**
+     * Accessor of FunctionA.getGPM
+     * @return FunctionA.getGPM
+     */
     public float getGPM() {
         return this.gpm;
     }
     
+    /**
+     * Calculate the optimal Rose and PNoir which result in optimal gross profit
+     */
 	public void calculateGrossProfit() {
 		this.optimalGP = -1 * this.fixedCost;
     	for (int numRose = 0; numRose <= this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek; numRose++) {
