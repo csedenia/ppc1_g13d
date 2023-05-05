@@ -19,16 +19,18 @@ public class System_message {
         this.capLabor = capLabor;
     }
 
-    public int Output_msg() {
+    public int checkW1() {
         int annualCapacity = this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek;
 
-        //      Situation A check      //
         if (annualCapacity < this.optimalRose + this.optimalNoir) {
             // set message to w1
             return 1;
         }
+        return 0;
+    }
+    public int checkW2() {
+        int annualCapacity = this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek;
 
-        //      Situation B check      //
         float grapeSurplus = this.capGrape - (this.optimalRose * 6 + this.optimalNoir * 4);
         if (grapeSurplus / this.capGrape >= 0.1) {
             float labourSurplus = this.capLabor - (this.optimalRose * 5 + this.optimalNoir * 12);
