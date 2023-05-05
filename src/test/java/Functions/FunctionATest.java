@@ -27,7 +27,7 @@ public class FunctionATest {
 	public void A02_calculateGrossProfit() {
 		FunctionA aTest = new FunctionA(3,1123000,550000,28.5f,31.4f,1300);
 		aTest.calculateGrossProfit();
-		assertEquals(aTest.getOptimalRose(), 14963);
-		assertEquals(aTest.getOptimalNoir(), 37);
+		assertEquals(aTest.getOptimalRose(), 15000);
+		assertEquals(aTest.getOptimalNoir(), 0);
 	}
 }

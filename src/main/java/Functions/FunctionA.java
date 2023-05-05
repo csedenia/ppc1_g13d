@@ -63,7 +63,7 @@ public class FunctionA {
         		  float salesRevenue = numRose * this.priceRose + numNoir * this.priceNoir;
 	              float vcl = ((numRose * 5) + (numNoir * 12)) * LABOUR_RATE;
 	              int maxProfit = (int)(salesRevenue - vcl) - this.fixedCost;
-	              if (maxProfit > this.optimalGP) {
+	              if (maxProfit >= this.optimalGP) {
 	            	  this.optimalRose = numRose;
 	                  this.optimalNoir = numNoir;
 	                  this.optimalGP = maxProfit;
