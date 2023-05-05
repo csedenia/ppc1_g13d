@@ -174,8 +174,6 @@ public class functionAController {
     }
 
     public void toclick(ActionEvent actionEvent) {
-        ObservableList<String> items = FXCollections.observableArrayList("w1: Insufficient production capacity to produce the optimal mix, please reduce or adjust the capacity of labor & grape volume!", "W2: Insufficient labor supplied to utilize the grape resource (less than 90%).");
-        or_scroll_text1.setValueFactory(new SpinnerValueFactory.ListSpinnerValueFactory<String>(items));
 
         boolean input_valid = true;
 
@@ -250,5 +248,23 @@ public class functionAController {
         DecimalFormat df = new DecimalFormat("0.0");
         or_Gross_Profit.setText(Integer.toString(objectA.getOptimalGP()));
         or_Profit_Margin.setText(df.format(objectA.getGPM()));
+        
+        //system warning message 
+        System_message warning_check= new System_message(objectA.getOptimalRose(), objectA.getOptimalNoir(), numWeek, capGrape, capLabour);
+
+        boolean hasW1 = warning_check.checkW1();
+        boolean hasW2 = warning_check.checkW2();
+
+        ObservableList<String> items = FXCollections.observableArrayList();
+
+        if(hasW1) {
+            items.add("w1: Insufficient production capacity to produce the optimal mix, please reduce or adjust the capacity of labor & grape volume!");
+        }
+
+        if(hasW2) {
+            items.add("W2: Insufficient labor supplied to utilize the grape resource (less than 90%).");
+        }
+
+        or_scroll_text1.setValueFactory(new SpinnerValueFactory.ListSpinnerValueFactory<String>(items));
     }
 }
