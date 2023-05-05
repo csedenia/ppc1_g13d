@@ -1,7 +1,16 @@
+/**
+ * Program Code for Input_checking
+ * @author Hardy, Fan Tsz Ho
+ */
 package Functions;
 
 public class Input_checking {
 	
+	/**
+	 * Function for Week Number Input Checking
+	 * @param input User's input
+	 * @return boolean value of user's input for Week Number being valid
+	 */
 	public static boolean date_checking(String input) { // for function B
 		try {
 			int date = Integer.parseInt(input);
@@ -18,6 +27,11 @@ public class Input_checking {
 		}
 	}
 	
+	/**
+	 * Function for Labor Capacity Input Checking
+	 * @param input User's input
+	 * @return boolean value of user's input for Labor Capacity being valid
+	 */
 	public static boolean labor_capacity_checking(String input) { // for function A B C
 		try {
 			Integer.parseInt(input);
@@ -29,6 +43,11 @@ public class Input_checking {
 		}
 	}
 	
+	/**
+	 * Function for Grape Capacity Input Checking
+	 * @param input User's input
+	 * @return boolean value of user's input for Grape Capacity being valid
+	 */
 	public static boolean grape_capacity_checking(String input) { // for function A B C
 		try {
 			Integer.parseInt(input);
@@ -40,6 +59,11 @@ public class Input_checking {
 		}
 	}
 	
+	/**
+	 * Function for Price of Rosé Input Checking
+	 * @param input User's input
+	 * @return boolean value of user's input for Price of Rosé being valid
+	 */
 	public static boolean pr_checking(String input) { // for function A B C
 		try {
 			Float.parseFloat(input);
@@ -51,6 +75,11 @@ public class Input_checking {
 		}
 	}
 	
+	/**
+	 * Function for Price of Noir Input Checking
+	 * @param input User's input
+	 * @return boolean value of user's input for Price of Noir being valid
+	 */
 	public static boolean pn_checking(String input) { // for function A B C
 		try {
 			Float.parseFloat(input);
@@ -62,6 +91,11 @@ public class Input_checking {
 		}
 	}
 	
+	/**
+	 * Function for Number of Weeks Input Checking
+	 * @param input User's input
+	 * @return boolean value of user's input for Number of Weeks being valid
+	 */
 	public static boolean numweek_checking(String input) { // for function A
 		try {
 			int week = Integer.parseInt(input);
@@ -78,6 +112,11 @@ public class Input_checking {
 		}
 	}
 	
+	/**
+	 * Function for Fixed Cost Input Checking
+	 * @param input User's input
+	 * @return boolean value of user's input for Fixed Cost being valid
+	 */
 	public static boolean fixedCost_checking(String input) { // for function A
 		try {
 			Integer.parseInt(input);
@@ -89,6 +128,11 @@ public class Input_checking {
 		}
 	}
 	
+	/**
+	 * Function for Backorder Volume for Rosé Input Checking
+	 * @param input User's input
+	 * @return boolean value of user's input for Backorder Volume for Rosé being valid
+	 */
 	public static boolean Rose_backOrder_checking(String input) { // for function C
 		try {
 			Integer.parseInt(input);
@@ -100,6 +144,11 @@ public class Input_checking {
 		}
 	}
 	
+	/**
+	 * Function for Backorder Volume for Noir Input Checking
+	 * @param input User's input
+	 * @return boolean value of user's input for Backorder Volume for Noir being valid
+	 */
 	public static boolean Noir_backOrder_checking(String input) { // for function C
 		try {
 			Integer.parseInt(input);
