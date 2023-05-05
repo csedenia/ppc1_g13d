@@ -12,10 +12,10 @@ public class FunctionA {
     float LABOUR_RATE_WEEK = 935;
     float LABOUR_RATE = LABOUR_RATE_WEEK / (STANDARD_MAN_POWER * 60); 
     
-    float LABOUR_CONSUMPTION_ROSE_MIN = 5;
-    float LABOUR_CONSUMPTION_NOIR_MIN = 12;
-    float GRAPE_CONSUMPTION_ROSE_MIN = 6;
-    float GRAPE_CONSUMPTION_NOIR_MIN = 4;
+    int LABOUR_CONSUMPTION_ROSE_MIN = 5;
+    int LABOUR_CONSUMPTION_NOIR_MIN = 12;
+    int GRAPE_CONSUMPTION_ROSE_MIN = 6;
+    int GRAPE_CONSUMPTION_NOIR_MIN = 4;
 
     //      input parameters       //
     private int numWeek;
@@ -80,7 +80,7 @@ public class FunctionA {
     
     /**
      * Accessor of FunctionA.getGPM
-     * @return FunctionA.getGPM
+     * @return FunctionA.gpm
      */
     public float getGPM() {
         return this.gpm;
@@ -93,15 +93,19 @@ public class FunctionA {
 		this.optimalGP = -1 * this.fixedCost;
     	for (int numRose = 0; numRose <= this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek; numRose++) {
 	          for (int numNoir = 0; numNoir <= (this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek - numRose); numNoir++) {
-        		  float salesRevenue = numRose * this.priceRose + numNoir * this.priceNoir;
-	              float vcl = ((numRose * 5) + (numNoir * 12)) * LABOUR_RATE;
-	              int maxProfit = (int)(salesRevenue - vcl) - this.fixedCost;
-	              if (maxProfit >= this.optimalGP) {
-	            	  this.optimalRose = numRose;
-	                  this.optimalNoir = numNoir;
-	                  this.optimalGP = maxProfit;
-	                  this.gpm = maxProfit / salesRevenue * 100;
-	              }
+	        	  int totalLabor = (numRose * this.LABOUR_CONSUMPTION_ROSE_MIN) + (numNoir * this.LABOUR_CONSUMPTION_NOIR_MIN);
+	        	  int totalGrape = (numRose * this.GRAPE_CONSUMPTION_ROSE_MIN) + (numNoir * this.GRAPE_CONSUMPTION_NOIR_MIN);
+                  if (totalLabor <= this.capLabor && totalGrape <= this.capGrape) {
+                      float salesRevenue = numRose * this.priceRose + numNoir * this.priceNoir;
+                      float vcl = ((numRose * 5) + (numNoir * 12)) * LABOUR_RATE;
+                      int maxProfit = (int)(salesRevenue - vcl) - this.fixedCost;
+                      if (maxProfit >= this.optimalGP) {
+                          this.optimalRose = numRose;
+                          this.optimalNoir = numNoir;
+                          this.optimalGP = maxProfit;
+                          this.gpm = maxProfit / salesRevenue * 100;
+                      }
+                  }
 	          }
     	}
         return;

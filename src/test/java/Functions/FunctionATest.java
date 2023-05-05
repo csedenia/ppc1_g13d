@@ -30,4 +30,20 @@ public class FunctionATest {
 		assertEquals(aTest.getOptimalRose(), 15000);
 		assertEquals(aTest.getOptimalNoir(), 0);
 	}
+	
+	@Test
+	public void A03_calculateGrossProfit() {
+		FunctionA aTest = new FunctionA(3,2000,2000,28.5f,31.4f,1300);
+		aTest.calculateGrossProfit();
+		assertEquals(aTest.getOptimalRose(), 308);
+		assertEquals(aTest.getOptimalNoir(), 38);
+	}
+
+	@Test
+	public void A04_calculateGrossProfit() {
+		FunctionA aTest = new FunctionA(3,10000,20000,28.5f,31.4f,1300);
+		aTest.calculateGrossProfit();
+		assertEquals(aTest.getOptimalRose(), 2000);
+		assertEquals(aTest.getOptimalNoir(), 0);
+	}
 }
