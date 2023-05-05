@@ -20,11 +20,11 @@ public class System_message {
     }
 
     public boolean checkW1() {
-        int annualCapacity = this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek;
+        int total_output = (this.optimalNoir + this.optimalRose) * this.numWeek;
         float grapeSurplus = this.capGrape - (this.optimalRose * 6 + this.optimalNoir * 4);
         float labourSurplus = this.capLabor - (this.optimalRose * 5 + this.optimalNoir * 12);
 
-        if (annualCapacity == 5000*this.numWeek && ((grapeSurplus > 0) || (labourSurplus > 0))) {
+        if (total_output == 5000*this.numWeek && ((grapeSurplus > 0) || (labourSurplus > 0))) {
             // set message to w1
             return true;
         }
