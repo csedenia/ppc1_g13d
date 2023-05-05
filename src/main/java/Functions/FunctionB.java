@@ -52,7 +52,7 @@ public class FunctionB {
 		int max_Noir = 0;
 		for (int i = 0; i <= pc; i++) {
 			float revenue = 0; //temp revenue for each round
-			for (int j = 0; j <= pc; j++) {
+			for (int j = 0; j <= pc-i; j++) {
 				int roseProduction = i;
 				int noirProduction = j;
 				int totalLabor = (roseProduction * lc_rose) + (noirProduction * lc_noir);
