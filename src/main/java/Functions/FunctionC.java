@@ -30,11 +30,11 @@ public class FunctionC extends FunctionB{
 		this.Bko_Noir = Bko_Noir;
 	}
 	
+	//accessors
 	/**
 	 * Accesssor of FunctionC.Bko_fulfill
 	 * @return FunctionC.Bko_fulfill
 	 */
-	//accessors
 	public boolean getBko_fulfill() {
 		return Bko_fulfill;
 	}
@@ -102,11 +102,12 @@ public class FunctionC extends FunctionB{
 		update();
 	}
 	
+	//function for identifying abnormal situation
 	/**
+	 * Function for Backorder Ratio Checking
 	 * Return false if ratio of backorder volume is lower than 70% of the optimal production volume
 	 * @return boolean value of backorder ratio being valid
 	 */
-	//function for identifying abnormal situation
 	public boolean bko_ratio_valid() {
 		//check if backorder ratio is greater than 70% of the optimal production volume
 		if ((Bko_Rose + Bko_Noir) < (Opt_Rose + Opt_Noir)*0.7) {
