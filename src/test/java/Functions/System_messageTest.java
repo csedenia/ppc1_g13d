@@ -11,8 +11,8 @@ public class System_messageTest {
 		FunctionA aTest = new FunctionA(1,1000,50000,12.5f,23.5f,112800);
 		aTest.calculateGrossProfit();
 		System_message output = new System_message(aTest.getOptimalRose(), aTest.getOptimalNoir(), 1, 50000, 1000);
-		assertEquals(output.checkW1(), 0);
-		assertEquals(output.checkW2(), 2);
+		assertEquals(output.checkW1(), false);
+		assertEquals(output.checkW2(), true);
 	}
 
 	@Test
@@ -20,7 +20,7 @@ public class System_messageTest {
 		FunctionA aTest = new FunctionA(1,120000,50000,12.5f,23.5f,112800);
 		aTest.calculateGrossProfit();
 		System_message output = new System_message(aTest.getOptimalRose(), aTest.getOptimalNoir(), 1, 50000, 120000);
-		assertEquals(output.checkW1(), 0);
-		assertEquals(output.checkW2(), 0);
+		assertEquals(output.checkW1(), false);
+		assertEquals(output.checkW2(), false);
 	}
 }

@@ -35,33 +35,32 @@ public class System_message {
      * Check whether need to output system message w1
      * @return Boolean, true for output w1, false for not output w1
      */
-    public int checkW1() {
-        int annualCapacity = this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek;
+    public boolean checkW1() {
+        int total_output = (this.optimalNoir + this.optimalRose) * this.numWeek;
+        float grapeSurplus = this.capGrape - (this.optimalRose * 6 + this.optimalNoir * 4);
+        float labourSurplus = this.capLabor - (this.optimalRose * 5 + this.optimalNoir * 12);
 
-        if (annualCapacity < this.optimalRose + this.optimalNoir) {
+        if (total_output == this.MAX_PRODUCTION_CAPACITY_WEEK*this.numWeek && ((grapeSurplus > 0) || (labourSurplus > 0))) {
             // set message to w1
-            return 1;
+            return true;
         }
-        return 0;
+        return false;
     }
-    
+
     /**
      * Check whether need to output system message w2
      * @return Boolean, true for output w2, false for not output w2
      */
-    public int checkW2() {
-        int annualCapacity = this.MAX_PRODUCTION_CAPACITY_WEEK * this.numWeek;
-
+    public boolean checkW2() {
         float grapeSurplus = this.capGrape - (this.optimalRose * 6 + this.optimalNoir * 4);
         if (grapeSurplus / this.capGrape >= 0.1) {
             float labourSurplus = this.capLabor - (this.optimalRose * 5 + this.optimalNoir * 12);
             System.out.println(labourSurplus);
             if (labourSurplus < 0) {
-                // set message to w2
-                return 2;
+                return true;
             }
         }
 
-        return 0;
+        return false;
     }
 }
