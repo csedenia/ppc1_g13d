@@ -1,3 +1,7 @@
+/**
+ * Program Code Function C
+ * @author Angus, Fung Yin Lai
+ */
 package Functions;
 
 public class FunctionC extends FunctionB{
@@ -8,6 +12,17 @@ public class FunctionC extends FunctionB{
 	//data member for output
 	private boolean Bko_fulfill = false;
 	
+	/**
+	 * Constructor for FunctionC
+	 * @param WeekOfYear	Number of weeks to be estimated for the harvest season in format of YYMM, e.g. 2301
+	 * @param Cap_Labor		Labor resource planned for the production cycle (in Minute)
+	 * @param Cap_Grape		Grape resource planned for the production cycle (in Kg)
+	 * @param Prc_Rose		Price of Rosé 
+	 * @param Prc_Noir		Price of P-Noir
+	 * @param Bko_Rose		Backorder volume of Rosé (in Litre)
+	 * @param Bko_Noir		Backorder volume of P-Noir (in Litre)
+	 * @return FunctionC Object
+	 */
 	//constructor
 	public FunctionC(int WeekOfYear, int Cap_Labor, int Cap_Grape, float Prc_Rose, float Prc_Noir, int Bko_Rose, int Bko_Noir){
 		super(WeekOfYear, Cap_Labor, Cap_Grape, Prc_Rose, Prc_Noir);
@@ -15,11 +30,18 @@ public class FunctionC extends FunctionB{
 		this.Bko_Noir = Bko_Noir;
 	}
 	
+	/**
+	 * Accesssor of FunctionC.Bko_fulfill
+	 * @return FunctionC.Bko_fulfill
+	 */
 	//accessors
 	public boolean getBko_fulfill() {
 		return Bko_fulfill;
 	}
 	
+	/**
+	 * Reserve Labor and Grape resources to backorder
+	 */
 	//reserve Cap_Labor and Cap_Grape to backorder before calculating product mix
 	public void reserve_backorder() {
 		int required_labor = 0;
@@ -71,12 +93,19 @@ public class FunctionC extends FunctionB{
 		return;
 	}
 	
+	/**
+	 * Reserve Labor and Grape resources to backorder and calculate optimal mix 
+	 */
 	//reserve resources to backorder and update optimal mix
 	public void update_backorder() {
 		reserve_backorder();
 		update();
 	}
 	
+	/**
+	 * Return false if ratio of backorder volume is lower than 70% of the optimal production volume
+	 * @return boolean value of backorder ratio being valid
+	 */
 	//function for identifying abnormal situation
 	public boolean bko_ratio_valid() {
 		//check if backorder ratio is greater than 70% of the optimal production volume
