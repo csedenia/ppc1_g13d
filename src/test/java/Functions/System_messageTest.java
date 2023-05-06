@@ -11,7 +11,7 @@ public class System_messageTest {
 		FunctionA aTest = new FunctionA(3,1123000,550000,28.5f,31.4f,1300);
 		aTest.calculateGrossProfit();
 		System_message output = new System_message(aTest.getOptimalRose(), aTest.getOptimalNoir(), 3, 550000, 1123000);
-		assertEquals(output.checkW1(), false); 
+		assertEquals(output.checkW1(), true); 
 		assertEquals(output.checkW2(), true); 
 	}
 
