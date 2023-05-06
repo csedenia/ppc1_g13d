@@ -251,6 +251,7 @@ public class functionCController {
 
         boolean hasW1 = warning_check.checkW1();
         boolean hasW2 = warning_check.checkW2();
+        boolean hasW3 = warning_check.checkW3(c);
 
         ObservableList<String> items = FXCollections.observableArrayList();
 
@@ -259,7 +260,11 @@ public class functionCController {
         }
 
         if(hasW2) {
-            items.add("W2: Insufficient labor supplied to utilize the grape resource (less than 90%).");
+            items.add("w2: Insufficient labor supplied to utilize the grape resource (less than 90%)!");
+        }
+        
+        if(hasW3) {
+        	items.add("w3: According to company policy, ratio of backorder volume should not lower than 70% of the optimal production volume!");
         }
 
         or_scroll_text1.setValueFactory(new SpinnerValueFactory.ListSpinnerValueFactory<String>(items));

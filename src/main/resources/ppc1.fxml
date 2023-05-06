@@ -44,7 +44,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.main.java.comp3111pcc1Controller">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.main.java.comp3111pcc1Controller">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -87,22 +87,18 @@
     </MenuBar>
     <AnchorPane fx:id="menu1" maxHeight="-1.0" maxWidth="-1.0" opacity="0.79" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <Button fx:id="function2" alignment="CENTER" layoutX="159.0" layoutY="172.0" mnemonicParsing="false" onAction="#Bfunction" prefHeight="30.0" prefWidth="348.0" style="-fx-font-size: 15; -fx-background-color: orange;" text="Weekly Review by Revenue" />
-            <Button fx:id="function3" alignment="CENTER" layoutX="159.0" layoutY="233.0" mnemonicParsing="false" onAction="#Cfunction" prefHeight="30.0" prefWidth="348.0" style="-fx-font-size: 15; -fx-background-color: orange;" text="Weekly Review by Revenue &amp; Backorders" />
-            <AnchorPane layoutX="8.0" layoutY="-71.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="259.0" prefWidth="468.0">
-               <children>
-                  <Label fx:id="Heading1" alignment="CENTER" graphicTextGap="5.0" layoutX="243.0" layoutY="115.0" prefHeight="30.0" prefWidth="154.0" style="-fx-border-color: blue;" text="PPC1 Calculator" textFill="BLUE" textOverrun="CENTER_ELLIPSIS">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <effect>
-                        <Glow />
-                     </effect>
-                  </Label>
-                  <Button fx:id="function1" layoutX="152.0" layoutY="188.0" mnemonicParsing="false" onAction="#Afunction" prefHeight="30.0" prefWidth="348.0" style="-fx-background-color: orange;" text="Annual Forecast by Gross Profit" textFill="#171817" />
-               </children>
-            </AnchorPane>
-            <Button fx:id="button_exit1" layoutX="281.0" layoutY="295.0" mnemonicParsing="false" onAction="#exit1" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: brown;" text="^ EXIT " textFill="#fcfc08">
+            <Button fx:id="function2" alignment="CENTER" layoutX="146.0" layoutY="169.0" mnemonicParsing="false" onAction="#Bfunction" prefHeight="30.0" prefWidth="348.0" style="-fx-font-size: 15; -fx-background-color: orange;" text="Weekly Review by Revenue" />
+            <Button fx:id="function3" alignment="CENTER" layoutX="146.0" layoutY="219.0" mnemonicParsing="false" onAction="#Cfunction" prefHeight="30.0" prefWidth="348.0" style="-fx-font-size: 15; -fx-background-color: orange;" text="Weekly Review by Revenue &amp; Backorders" />
+            <Label fx:id="Heading1" alignment="CENTER" graphicTextGap="5.0" layoutX="244.0" layoutY="62.0" prefHeight="30.0" prefWidth="154.0" style="-fx-border-color: blue;" text="PPC1 Calculator" textFill="BLUE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Button fx:id="function1" alignment="CENTER" layoutX="146.0" layoutY="118.0" mnemonicParsing="false" onAction="#Afunction" prefHeight="30.0" prefWidth="348.0" style="-fx-font-size: 15; -fx-background-color: orange;" text="Annual Forecast by Gross Profit" />
+            <Button fx:id="button_exit1" layoutX="281.0" layoutY="269.0" mnemonicParsing="false" onAction="#exit1" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: brown;" text="^ EXIT " textFill="#fcfc08">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
