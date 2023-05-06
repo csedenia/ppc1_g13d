@@ -31,7 +31,7 @@ public class FunctionB {
 	 * @param WeekOfYear	Number of weeks to be estimated for the harvest season in format of YYMM, e.g. 2301
 	 * @param Cap_Labor		Labor resource planned for the production cycle (in Minute)
 	 * @param Cap_Grape		Grape resource planned for the production cycle (in Kg)
-	 * @param Prc_Rose		Price of Rosé 
+	 * @param Prc_Rose		Price of Rosï¿½ 
 	 * @param Prc_Noir		Price of P-Noir
 	 */
 	//constructor
@@ -161,7 +161,6 @@ public class FunctionB {
 		if (Sur_Labor < 0) {
 			return false;
 		}
-		
 		return true;
 	}
 	

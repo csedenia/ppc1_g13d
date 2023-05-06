@@ -49,9 +49,15 @@ public class FunctionB_Test {
 	public void test7() { //Sample testing 1 
 		FunctionB tester = new FunctionB(2301, 12000, 5000, 12.5f, 23.5f); // Initialize the input data, assume they are all correct
 		tester.update();
-		assertEquals(935, tester.getOpt_Revenue());
-		//assertEquals(15, tester.getOpt_Rose());
-		//assertEquals(2, tester.getOpt_Noir());
+		assertEquals(24119, tester.getOpt_Revenue());
+		assertEquals(0, tester.getSur_Labor());
+		assertEquals(0, tester.getSur_Grape());
+		assertEquals(true, tester.pc_valid());
+		assertEquals(true, tester.grape_consumption_valid());
+		assertEquals(true, tester.Sur_Labor_valid());
+		assertEquals(true, tester.Sur_Grape_valid());
+		
+		
 	}
 	
 
