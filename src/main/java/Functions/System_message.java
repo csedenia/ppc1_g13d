@@ -59,4 +59,13 @@ public class System_message {
 
         return false;
     }
+    
+    /**
+     * Check whether need to output system message w3
+     * @param functC FunctionC object (with optimal output calculated)
+     * @return Boolean, true for output w3, false for not output w3
+     */
+    public boolean checkW3(FunctionC functC) {
+    	return !(functC.bko_ratio_valid());
+    }
 }

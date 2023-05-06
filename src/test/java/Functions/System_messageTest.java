@@ -23,4 +23,14 @@ public class System_messageTest {
 		assertEquals(output.checkW1(), true);
 		assertEquals(output.checkW2(), true);
 	}
+	
+	@Test
+	public void S03_checkW3() {
+		FunctionC cTest = new FunctionC(2301, 1000, 1000, 12.5f, 23.5f, 1, 1);
+		cTest.update_backorder();
+		System_message output = new System_message(cTest.getOpt_Rose(), cTest.getOpt_Noir(), 1, 1000, 1000);
+		assertEquals(output.checkW1(), false);
+		assertEquals(output.checkW2(), false);
+		assertEquals(output.checkW3(cTest), true);
+	}
 }
