@@ -1,10 +1,13 @@
 package src.main.java;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.layout.AnchorPane;
@@ -123,7 +126,7 @@ public class functionCController {
     private Line vLine3;
 
     @FXML
-    private Spinner<?> or_scroll_text1;
+    private Spinner<String> or_scroll_text1;
 
     @FXML
     private Label label_sysmsg1;
@@ -242,6 +245,24 @@ public class functionCController {
     	} else {
     		Bko_Fulfill.setText("Yes");
     	}
+    	
+    	//system warning message 
+        System_message warning_check= new System_message(c.getOpt_Rose(), c.getOpt_Noir(), 1, gc, lc);
+
+        boolean hasW1 = warning_check.checkW1();
+        boolean hasW2 = warning_check.checkW2();
+
+        ObservableList<String> items = FXCollections.observableArrayList();
+
+        if(hasW1) {
+            items.add("w1: Insufficient production capacity to produce the optimal mix, please reduce or adjust the capacity of labor & grape volume!");
+        }
+
+        if(hasW2) {
+            items.add("W2: Insufficient labor supplied to utilize the grape resource (less than 90%).");
+        }
+
+        or_scroll_text1.setValueFactory(new SpinnerValueFactory.ListSpinnerValueFactory<String>(items));
     }
 
     @FXML
