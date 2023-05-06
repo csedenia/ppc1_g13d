@@ -60,9 +60,9 @@ public class Input_checking {
 	}
 	
 	/**
-	 * Function for Price of Rosé Input Checking
+	 * Function for Price of Rosï¿½ Input Checking
 	 * @param input User's input
-	 * @return boolean value of user's input for Price of Rosé being valid
+	 * @return boolean value of user's input for Price of Rosï¿½ being valid
 	 */
 	public static boolean pr_checking(String input) { // for function A B C
 		try {
@@ -129,9 +129,9 @@ public class Input_checking {
 	}
 	
 	/**
-	 * Function for Backorder Volume for Rosé Input Checking
+	 * Function for Backorder Volume for Rosï¿½ Input Checking
 	 * @param input User's input
-	 * @return boolean value of user's input for Backorder Volume for Rosé being valid
+	 * @return boolean value of user's input for Backorder Volume for Rosï¿½ being valid
 	 */
 	public static boolean Rose_backOrder_checking(String input) { // for function C
 		try {
