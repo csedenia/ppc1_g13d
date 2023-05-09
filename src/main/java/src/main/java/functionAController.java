@@ -244,7 +244,7 @@ public class functionAController {
         objectA.calculateGrossProfit();
         or_Prod_Vol_Noir.setText(Integer.toString(objectA.getOptimalNoir()));
         or_Prod_Vol_Rose.setText(Integer.toString(objectA.getOptimalRose()));
-        or_Prod_Vol_Total.setText(Integer.toString(objectA.getOptimalNoir()) + Integer.toString(objectA.getOptimalRose()));
+        or_Prod_Vol_Total.setText(Integer.toString(objectA.getOptimalNoir()+objectA.getOptimalRose()));
         DecimalFormat df = new DecimalFormat("0.0");
         or_Gross_Profit.setText(Integer.toString(objectA.getOptimalGP()));
         or_Profit_Margin.setText(df.format(objectA.getGPM()));

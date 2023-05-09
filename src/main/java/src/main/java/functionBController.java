@@ -206,7 +206,7 @@ public class functionBController {
         objectB.update();
         or_Prod_Vol_Noir.setText(Integer.toString(objectB.getOpt_Noir()));
         or_Prod_Vol_Rose.setText(Integer.toString(objectB.getOpt_Rose()));
-        or_Prod_Vol_Total.setText(Integer.toString(objectB.getOpt_Noir()) + Integer.toString(objectB.getOpt_Rose()));
+        or_Prod_Vol_Total.setText(Integer.toString(objectB.getOpt_Noir()+objectB.getOpt_Rose()));
         or_Total_Revenue.setText(Integer.toString(objectB.getOpt_Revenue()));
         or_Labor_Surplus.setText(Integer.toString(objectB.getSur_Labor()));
         or_Grape_Surplus.setText(Integer.toString(objectB.getSur_Grape()));

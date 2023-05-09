@@ -1,0 +1,902 @@
+commit 60655272d43c0cc355f9f183af384eb2a2a5f8b3
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Sat May 6 14:04:13 2023 +0800
+
+    test case for system message bug fixed
+
+commit f15ec937c97072b5e358127de1eeb3bed29353f9
+Merge: b4eb1ab 7e1a607
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Sat May 6 13:45:46 2023 +0800
+
+    Merge pull request #49 from Hardy0611/sceneBuilder
+    
+    Scene builder
+
+commit 7e1a607c501bc2a05b5ff8970eac18eb93d7d8bc
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Sat May 6 13:44:04 2023 +0800
+
+    spinner for function B and C
+
+commit 693ab973cb0f68003644e9d7d61ae75a627ebc2f
+Merge: c396cfe b4eb1ab
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Sat May 6 13:29:36 2023 +0800
+
+    Merge pull request #48 from Hardy0611/main
+    
+    update scenebuilder branch
+
+commit b4eb1ab48f1ed5cf2e9bb1a7e5e7e995d4052787
+Merge: 14885ec c4c0547
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Sat May 6 13:28:49 2023 +0800
+
+    Merge pull request #47 from Hardy0611/FunctionB
+    
+    Function b
+
+commit c4c0547e07440149b673f4a7c5b24a640f76dd5a
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Sat May 6 13:24:44 2023 +0800
+
+    input checking test case
+
+commit 146d6bbd59e2c4e07468c87e6400720a408d0089
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Sat May 6 12:33:47 2023 +0800
+
+    functionB test case update
+
+commit 14885ecf5de682e3c42538410521eb9f00bafe8b
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Fri May 5 23:45:22 2023 +0800
+
+    update system message
+
+commit c396cfe5ca31c4dc2b5eaa4b1e512dc28d506a01
+Merge: 1e12a01 73f042d
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Fri May 5 23:01:00 2023 +0800
+
+    Merge pull request #46 from Hardy0611/main
+    
+    update SceneBuilder
+
+commit 6116804fbfae222e685c48423b128df582535144
+Merge: c5a3dc6 73f042d
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Fri May 5 22:59:22 2023 +0800
+
+    Merge pull request #44 from Hardy0611/main
+    
+    Update function B
+
+commit 73f042d8dfb93779284200b8b9169eeb085a22f1
+Merge: 55a45ae 82a2b4a
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Fri May 5 22:57:48 2023 +0800
+
+    Merge pull request #42 from Hardy0611/FunctionC
+    
+    remove debug message from functionC
+
+commit 55a45ae510f037cda850e7c701e951649e6f924e
+Merge: 4abaa6c 1e12a01
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Fri May 5 22:57:24 2023 +0800
+
+    Merge pull request #41 from Hardy0611/sceneBuilder
+    
+    Scene builder
+
+commit 1e12a01e15d3bdf37ef36201d8db3cccd6ed9690
+Merge: fbdfb02 4abaa6c
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Fri May 5 22:57:09 2023 +0800
+
+    Merge branch 'main' into sceneBuilder
+
+commit 82a2b4afd6bfca61013972e82714dc0efe103476
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Fri May 5 22:48:18 2023 +0800
+
+    remove debug message from functionC
+
+commit 4abaa6c4b23ce802d3740a04c2e21959bd6651b4
+Merge: c698942 5260fba
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Fri May 5 22:47:42 2023 +0800
+
+    Merge pull request #40 from Hardy0611/FunctionC
+    
+    bug fix for functionC and functionB
+
+commit 5260fba51afb96a14067fd84dc758a0eaabbd9ed
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Fri May 5 22:42:21 2023 +0800
+
+    bug fix for functionC and functionB
+
+commit c698942b2790051edad55348e5d265c8ec745edc
+Merge: de4abe7 6e6ead5
+Author: furgy2003 <90049379+furgy2003@users.noreply.github.com>
+Date:   Fri May 5 22:23:44 2023 +0800
+
+    Merge pull request #39 from Hardy0611/FunctionA
+    
+    Function a update
+
+commit 6e6ead5fe4728462bb5c6f4f07b22fc5f184c066
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Fri May 5 22:19:03 2023 +0800
+
+    update functionA
+
+commit fbdfb02c4dc1f93b9080a90e0d0a12d3f10c5ffe
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Fri May 5 20:19:27 2023 +0800
+
+    w1 checking debug
+
+commit a78e720eeaf569165ac2165b10d7469dc5b1ec39
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Fri May 5 20:04:44 2023 +0800
+
+    change checking to boolean
+
+commit c0200327c802571982a05978626dd5c3cd613e46
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Fri May 5 20:04:10 2023 +0800
+
+    update the sprinner
+
+commit de4abe783deb7de1acd7b69a9a5097e313e63331
+Merge: f54b93f 65f7cab
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Fri May 5 19:44:45 2023 +0800
+
+    Merge pull request #38 from Hardy0611/FunctionC
+    
+    added javadoc
+
+commit 65f7cabfe0547b6918dbd124030d68423125ee90
+Merge: c75ce37 f54b93f
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Fri May 5 19:42:30 2023 +0800
+
+    Merge pull request #37 from Hardy0611/main
+    
+    merge main into functionC
+
+commit 20999faa51a791a8dd7662952a801ec78dfff867
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Fri May 5 19:42:13 2023 +0800
+
+    add java doc to function A
+
+commit f56b0d3b1724291ff05b9fc155ffcd94d28529d8
+Merge: 1b3f3fa c6d4171
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Fri May 5 19:24:05 2023 +0800
+
+    Merge branch 'FunctionA' of https://github.com/Hardy0611/GroupProject into FunctionA
+
+commit 1b3f3fafc242decefd0fe6a8a8057a8fd1a28765
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Fri May 5 19:23:29 2023 +0800
+
+    update functionA
+
+commit c75ce3787d7e5781d7a3286ddbd8d0fd131cd256
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Fri May 5 19:20:52 2023 +0800
+
+    added javadoc code to FunctionB and FunctionC.java
+
+commit 6e29cbe7cb33a6bd0baa3a311cc8acb88f40e05e
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Wed May 3 22:48:27 2023 +0800
+
+    update ppc ui
+
+commit 8386bbb092e71c1ebb59a301d5c0ca842ed22b33
+Merge: e3b4078 f54b93f
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Fri May 5 19:08:15 2023 +0800
+
+    Merge pull request #36 from Hardy0611/main
+    
+    update
+
+commit f54b93f12eabbaa01aa1e632293c167d8b67a7a9
+Merge: 9d273fd c6d4171
+Author: furgy2003 <90049379+furgy2003@users.noreply.github.com>
+Date:   Fri May 5 19:05:34 2023 +0800
+
+    Merge pull request #35 from Hardy0611/FunctionA
+    
+    update system message class
+
+commit c6d417171948131cf31a93bd8b2b743a65a21d27
+Merge: 05a8dd4 9d273fd
+Author: furgy2003 <90049379+furgy2003@users.noreply.github.com>
+Date:   Fri May 5 19:05:19 2023 +0800
+
+    Merge branch 'main' into FunctionA
+
+commit 05a8dd4af456e01a043756a4744bd62860980f28
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Fri May 5 18:56:03 2023 +0800
+
+    update system message class
+
+commit 9d273fde3d90e87efdc2e14e0ddd0abb9cf30607
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Fri May 5 18:52:43 2023 +0800
+
+    changed names for testing functions in System_messageTest.java
+
+commit fe3580c8982fcf8bad05d532e32ebe94dbdbdae4
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Fri May 5 18:44:39 2023 +0800
+
+    added javadoc code to FunctionC.java
+
+commit b60d80534b931caa490025a14e32cb0950ca6288
+Merge: 7f4b277 9f5a4f0
+Author: furgy2003 <90049379+furgy2003@users.noreply.github.com>
+Date:   Fri May 5 18:41:18 2023 +0800
+
+    Merge pull request #34 from Hardy0611/FunctionA
+    
+    add Test for system message
+
+commit 9f5a4f0c4f640a4b390a5eed5d5ea39d590434e1
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Fri May 5 18:39:36 2023 +0800
+
+    add Test for system message
+
+commit e3b407809b457ceea77330d371394e5843349d94
+Merge: d1e4ddb 069017f
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 22:58:15 2023 +0800
+
+    Merge branch 'sceneBuilder' of https://github.com/Hardy0611/GroupProject into sceneBuilder
+
+commit d1e4ddbe8e74c7f861831ccd924fe85d8478daff
+Merge: e67f23e 7f4b277
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 22:56:18 2023 +0800
+
+    Merge branch 'main' into sceneBuilder
+
+commit 7f4b277eb352a139c8180d0c3cbe2912a85b0017
+Merge: 59c93fa 7f77b40
+Author: furgy2003 <90049379+furgy2003@users.noreply.github.com>
+Date:   Wed May 3 22:55:48 2023 +0800
+
+    Merge pull request #33 from Hardy0611/FunctionA
+    
+    create a new class separate from function A to output system message
+
+commit 7f77b4017c89e16f1a4d6621fa9c7e2a13ca663a
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 22:54:31 2023 +0800
+
+    create a new class separate from function A to output system message
+
+commit e67f23e1d4421d2f1e5b0ef147296e6871fafb05
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 22:38:04 2023 +0800
+
+    update function A controller to format gpm
+
+commit 47b15a9cc04489fe16bcdb8f50621124fbe3dafb
+Merge: 210cae9 59c93fa
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 22:32:30 2023 +0800
+
+    Merge branch 'main' into sceneBuilder
+
+commit 59c93fa6fd2e528a7ef63658bbdd70e0043312e6
+Merge: 0f54be8 4fd580d
+Author: furgy2003 <90049379+furgy2003@users.noreply.github.com>
+Date:   Wed May 3 22:31:57 2023 +0800
+
+    Merge pull request #32 from Hardy0611/FunctionA
+    
+    update from float to int for gross profit
+
+commit 4fd580d3952e0390a6f17aafa938b9b955d487ef
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 22:31:21 2023 +0800
+
+    update from float to int for gross profit
+
+commit 069017ffcb037ee21af138e98ef66092edf31b5c
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed May 3 22:25:46 2023 +0800
+
+    updated names of ui component for functionC
+
+commit 210cae9d241a6d64a891aec86835072ecbc76012
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 22:25:28 2023 +0800
+
+    add functionB controller
+
+commit 5194d5af0220a68181448a9fd9ea008bae694ab8
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed May 3 22:12:04 2023 +0800
+
+    updated ppc1 fxml
+
+commit c233a18dcaddf5ee8186937c3b707cf40c8e95a4
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed May 3 22:10:08 2023 +0800
+
+    hardy
+
+commit 624faaca6ed31ab6aa5ffdefec9fbb78ac7424d3
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 21:46:56 2023 +0800
+
+    update Function C push wrong just now
+
+commit aec7331268260e7f941e958f45a322ef5a66abc1
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 21:45:03 2023 +0800
+
+    update Function C in sceneBuilder branch
+
+commit 7fe110e3d4042b301fa5c14d1fe3a637e66d171b
+Merge: 939090b 49ebc2f
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 21:41:25 2023 +0800
+
+    update controller A
+
+commit 939090b23d7cfe2eec00e259a58023e870250c30
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 21:37:21 2023 +0800
+
+    add controller A
+
+commit 49ebc2ff7eb04bb0cb10e65cda4061a6ea924a1f
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed May 3 21:33:06 2023 +0800
+
+    updated functionCController.java
+
+commit 2d98593ecae6197b7b98a4288dde0cea355b98fb
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed May 3 20:58:12 2023 +0800
+
+    update functionCController
+
+commit cd955ba0a688dc220282672720b1c75bf9e4a29c
+Merge: 6fdcdc1 0f54be8
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed May 3 20:11:58 2023 +0800
+
+    Merge branch 'main' into sceneBuilder
+
+commit 0f54be84bb1250b157012912e39a988b3a9d3470
+Merge: ba3ff71 c5a3dc6
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Wed May 3 15:20:55 2023 +0800
+
+    Merge pull request #30 from Hardy0611/FunctionB
+    
+    Function B bug fixed
+
+commit ba3ff71a3b2c83cd0263c38fdf53d159760327f2
+Merge: 6aebcce 1d7f73e
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Wed May 3 15:19:41 2023 +0800
+
+    Merge pull request #29 from Hardy0611/FunctionC
+    
+    Function c
+
+commit 1d7f73e4260f3041ef1789de3d0c272953225471
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed May 3 15:18:44 2023 +0800
+
+    updated reserve_backorder s.t. opt_rose+opt_noir never exceeds pc
+
+commit 6aebcce979fd5635416927a7c5d205538130ca18
+Merge: c73e98b ae35bb8
+Author: furgy2003 <90049379+furgy2003@users.noreply.github.com>
+Date:   Tue May 2 17:38:45 2023 +0800
+
+    Merge pull request #28 from Hardy0611/FunctionA
+    
+    Function a
+
+commit c5a3dc67e187fa64658f646db61d3e8ca59fda97
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Tue May 2 17:37:59 2023 +0800
+
+    Function B bug fixed
+
+commit ae35bb8ee5a47d83a68024e524750604df06fa48
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Tue May 2 17:37:47 2023 +0800
+
+    update Function A
+
+commit d0c3b465bffbc46b1009b816827c710d3fc48e5d
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Sat Apr 29 16:36:39 2023 +0800
+
+    corrections for FunctionA
+
+commit 473fcfd62afc80083478f4924fd553c49ed3855a
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed Apr 26 17:20:43 2023 +0800
+
+    updated Test Functions in FunctionCTest.java
+
+commit c73e98b24cf5dff93f42d9fa684519824b3c12dd
+Merge: ce19dfc d2b7c4d
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Tue Apr 25 23:51:38 2023 +0800
+
+    Merge pull request #27 from Hardy0611/FunctionC
+    
+    Function c
+
+commit edd36245c958b2986a696e6214bc1643ee5f9831
+Merge: 709d179 6fdcdc1
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Tue Apr 25 23:42:49 2023 +0800
+
+    Merge branch 'sceneBuilder' of https://github.com/Hardy0611/GroupProject into sceneBuilder
+
+commit d2b7c4d1b3810c33066b6d51c5dde0c1f8a16657
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Tue Apr 25 23:42:30 2023 +0800
+
+    fixed reserve_backroder() in class FunctionC
+
+commit 709d179bada3a9c2ad7a8c3ff165242c437abb19
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Tue Apr 25 23:36:35 2023 +0800
+
+    fixed algorithm of reserve_backorder() in class FunctionC
+
+commit 6fdcdc12fd5fedcb7514228c7a727b857a787ef1
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Tue Apr 25 17:49:04 2023 +0800
+
+    linking GUI to Java
+
+commit 2add2a3f24536431c8d7c917d0764220b158be48
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Tue Apr 25 17:30:07 2023 +0800
+
+    update GUI
+
+commit 8fb9f1a8ae336ffc12161798863bf27225fe3a77
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Tue Apr 25 17:18:11 2023 +0800
+
+    add builder for function b and c
+
+commit 0705de117161df861b253afbec45d1a99492f845
+Merge: 698eb8a ce19dfc
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Tue Apr 25 17:07:21 2023 +0800
+
+    Merge pull request #26 from Hardy0611/main
+    
+    yee
+
+commit ce19dfcf990b4bd9ad376c2ff68ab2dcc38437fc
+Merge: 7d0482f 698eb8a
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Tue Apr 25 17:06:01 2023 +0800
+
+    Merge pull request #25 from Hardy0611/FunctionC
+    
+    Function c
+
+commit 7d0482f35e714fb44eede04c8fa0446d6ed3f364
+Merge: e89f006 3f564c7
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Tue Apr 25 17:05:21 2023 +0800
+
+    Merge pull request #24 from Hardy0611/FunctionB
+    
+    Function b
+
+commit e89f0068ed3e71aa48d6dc4284d7a4b721f964bd
+Merge: d274054 6a0bf19
+Author: furgy2003 <90049379+furgy2003@users.noreply.github.com>
+Date:   Tue Apr 25 17:04:42 2023 +0800
+
+    Merge pull request #23 from Hardy0611/FunctionA
+    
+    Function A
+
+commit 3f564c709be19233d6ff77a7a05196d43f70fb92
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Tue Apr 25 16:43:20 2023 +0800
+
+    more testing case
+
+commit 6a0bf19e69bf90c6a48ea1607f00b6c77fef76fb
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Sun Apr 23 21:27:33 2023 +0800
+
+    fixed bug and add test
+
+commit 698eb8a1bfcfe33bbf990dd7d72ebd2ea0ea9c40
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Thu Apr 20 21:10:42 2023 +0800
+
+    bug fix in FunctionC.java, added test functions in FunctionCTest.java
+
+commit 25af187d3c260afc701e91578d317e7402e6b171
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Thu Apr 20 18:01:07 2023 +0800
+
+    made typical values test for update()
+
+commit 3eec982e2a62fad893937c91062b5fcfb924c6d0
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Thu Apr 20 15:55:35 2023 +0800
+
+    made two boundary testing for Opt_revenue
+
+commit 2d50b4347896f5dee8498d100eb6b2e78052a479
+Merge: f0bbf57 d274054
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Wed Apr 19 22:45:31 2023 +0800
+
+    Merge pull request #22 from Hardy0611/main
+    
+    kenneth is handsome
+
+commit 70f81685458b93e8a1b8eeb14b1b8e08ddae7747
+Merge: 082136b b30e688
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed Apr 19 22:39:08 2023 +0800
+
+    Merge branch 'FunctionA' of https://github.com/Hardy0611/GroupProject into FunctionA
+
+commit 015cdca6de04ff4c528301d2d441ab7bb23fa04f
+Merge: 2887596 d274054
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Wed Apr 19 22:36:25 2023 +0800
+
+    Merge pull request #21 from Hardy0611/main
+    
+    Created unit test
+
+commit b30e6888ad6fc37c0f074b46b18f583fef7fb806
+Merge: ce17829 d274054
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Wed Apr 19 22:35:54 2023 +0800
+
+    Merge pull request #20 from Hardy0611/main
+    
+    Created unit test
+
+commit 082136ba50a250b6c011304d61a4840131f934e5
+Merge: ce17829 d274054
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Wed Apr 19 22:34:09 2023 +0800
+
+    Merge branch 'main' into FunctionA
+
+commit d274054bd09a509c91ce619b92f43d75c15f16f5
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Wed Apr 19 22:31:30 2023 +0800
+
+    Created unit test
+
+commit 28875968848d6d809c7373edeb435a8857f2b86a
+Merge: e8706ac 53368b7
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Wed Apr 19 22:26:11 2023 +0800
+
+    Merge pull request #19 from Hardy0611/main
+    
+    For B
+
+commit ce178295205a48b03ffd18aee9e8d0e4ebe80f4a
+Merge: f8d10f2 53368b7
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Wed Apr 19 22:25:40 2023 +0800
+
+    Merge pull request #18 from Hardy0611/main
+    
+    for A
+
+commit f0bbf57fc31a8abe89721f815c2771a70de4e65d
+Merge: 4067ebb 53368b7
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Wed Apr 19 22:23:04 2023 +0800
+
+    Merge pull request #17 from Hardy0611/main
+    
+    da jia hao
+
+commit 53368b7b40610b2fb3e77da66af40c2e108cae57
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Wed Apr 19 22:17:50 2023 +0800
+
+    added JUnit test
+
+commit 43ac9145789974659eb0a84094d1b3058ec97504
+Merge: 37ed438 f8d10f2
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Wed Apr 19 22:15:48 2023 +0800
+
+    Merge pull request #16 from Hardy0611/FunctionA
+    
+    Function a
+
+commit 37ed438aead291598a9821332242672394c89aa0
+Merge: 74af958 4067ebb
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Wed Apr 19 01:56:08 2023 +0800
+
+    Merge pull request #15 from Hardy0611/FunctionC
+    
+    finish all validation functions for classes FunctionB, FunctionC
+
+commit 4067ebb12e2f30cbf17733e8b0b0bbfc137a82d5
+Merge: a918e90 76adb71
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed Apr 19 01:53:34 2023 +0800
+
+    Merge branch 'FunctionC' of https://github.com/Hardy0611/GroupProject into FunctionC
+
+commit a918e90525eae55ff7f8bcb6d21f0c84043ec788
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed Apr 19 01:51:33 2023 +0800
+
+    add 2 more validation functions for class FunctionB
+
+commit 76adb717c65b4bb96816508c0c15180adc5d2ea4
+Merge: 3537fab 74af958
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Wed Apr 19 01:49:06 2023 +0800
+
+    Merge pull request #14 from Hardy0611/main
+    
+    merge main into branch FunctionC
+
+commit 38e83ceeb74380543ee34dddc4c823aaa9dd4b88
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed Apr 19 01:44:54 2023 +0800
+
+    2 more validation functions in class FunctionB
+
+commit 74af9589914ce2bb24f970ff6a891061da96b29d
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Wed Apr 19 01:37:32 2023 +0800
+
+    fixed typo in FunctionC.java
+
+commit dafa10d02c7066916e61b8407ebe9877c98a934a
+Merge: b3d7800 3537fab
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Wed Apr 19 01:36:10 2023 +0800
+
+    Merge pull request #13 from Hardy0611/FunctionC
+    
+    Function c
+
+commit 3537fabc2c0c25ae42f8a2c038769f053eee3c72
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Wed Apr 19 01:32:35 2023 +0800
+
+    more functions for FunctionB, FunctionC
+
+commit b3d7800266a7b0cacb2cfc4071d8fe3c099658df
+Merge: a2c031b e8706ac
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Wed Apr 19 01:20:48 2023 +0800
+
+    Merge pull request #12 from Hardy0611/FunctionB
+    
+    made input validation for function A and C
+
+commit e8706ac23ffd9e83756ae11d867db8e4ecc1ee02
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Wed Apr 19 01:19:05 2023 +0800
+
+    made input validation for function A and C
+
+commit 658c9897f976e481563dc9ee0e9533e63b6766e7
+Merge: 16028bc a2c031b
+Author: fyl3283 <125683745+fyl3283@users.noreply.github.com>
+Date:   Wed Apr 19 00:47:34 2023 +0800
+
+    Merge pull request #11 from Hardy0611/main
+    
+    sync main with branch FunctionC
+
+commit a2c031b7a5e4514dde226c84c6a2145994cfedc5
+Merge: efbb655 8ff2497
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Wed Apr 19 00:31:43 2023 +0800
+
+    Merge pull request #10 from Hardy0611/FunctionB
+    
+    Function b
+
+commit 8ff2497c03182d34f89c53a8fe001c8322f6c612
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Wed Apr 19 00:30:52 2023 +0800
+
+    made the input checking for all input parameter in functionB
+
+commit 2f8661e3487a6f154100f4c945f27c186b93b84a
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Wed Apr 19 00:19:50 2023 +0800
+
+    update to convene FunctionC
+
+commit 57f736013e952fb8f79c2f51cbc999cb47699804
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Tue Apr 18 19:30:43 2023 +0800
+
+    modified FunctionB.update()
+
+commit a45486ebdd02befacf5284f69984b283b9cc68dc
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Tue Apr 18 17:50:10 2023 +0800
+
+    made input checking function for date
+
+commit f8d10f228ec12e9d7f20ceb89bea2eccdb0cb6cf
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Tue Apr 18 17:25:45 2023 +0800
+
+    make output parameter become attribute
+
+commit 9906e05668cb1284d9122f2e31e8f7bcd2195d02
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Tue Apr 18 16:20:54 2023 +0800
+
+    bug fixed
+
+commit 6eb1a9e9631a628f59c90d3b5c5e3bc3f04c96c0
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Tue Apr 18 16:20:43 2023 +0800
+
+    bug fixed
+
+commit 178085a7f446ef71b653fb185630552da34cf6c7
+Author: Sasatorn Lohanakakul <furgy2003@gmail.com>
+Date:   Tue Apr 18 14:51:23 2023 +0800
+
+    add code to Function A
+
+commit c540e6b611cac9f706c0bec769aaa03a052028e0
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Tue Apr 18 11:04:26 2023 +0800
+
+    made GetFunctions for each output data
+
+commit 16028bc230549b5f8d5c9511469560259128e313
+Merge: 76262b4 efbb655
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Mon Apr 17 18:34:22 2023 +0800
+
+    Merge pull request #9 from Hardy0611/main
+    
+    updates for functions
+
+commit 2001c9dc011e49b3488d668c04478163138710e6
+Merge: de2b726 efbb655
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Mon Apr 17 18:33:40 2023 +0800
+
+    Merge pull request #8 from Hardy0611/main
+    
+    updates for functions
+
+commit cfddcfd57acfc492fb6ecf0577661817a3c25f86
+Merge: 612fa2c efbb655
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Mon Apr 17 18:33:10 2023 +0800
+
+    Merge pull request #7 from Hardy0611/main
+    
+    updates for functions
+
+commit efbb655383a2b0648e8827822ccd37be344d9ef2
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Mon Apr 17 18:29:44 2023 +0800
+
+    structure cleaning
+
+commit 1561bdaf3d7451fdd91577ce75fdee75a416c80a
+Merge: 7a8eb3a 76262b4
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Mon Apr 17 18:26:50 2023 +0800
+
+    Merge pull request #4 from Hardy0611/FunctionC
+    
+    bing chiling
+
+commit 7a8eb3aa340f2633f9fd98c0bef7bbc87d0ebae1
+Merge: 3576e74 612fa2c
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Mon Apr 17 18:26:39 2023 +0800
+
+    Merge pull request #5 from Hardy0611/FunctionA
+    
+    Created FunctionA
+
+commit 3576e74a8bf55777c0c94a2194139eace906cf97
+Merge: 67b2c00 de2b726
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Mon Apr 17 18:26:16 2023 +0800
+
+    Merge pull request #6 from Hardy0611/FunctionB
+    
+    Function B
+
+commit 76262b41ff0e707da633d6f606fd986f75a43e1b
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Mon Apr 17 18:12:18 2023 +0800
+
+    structure cleaning
+
+commit de2b7264f96efe3f382d8038161df9cfc7be97c3
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Mon Apr 17 18:09:56 2023 +0800
+
+    Constrcutor of functionB
+
+commit 612fa2c648c8af093447b5a1bb85c73d5a4eaba4
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Mon Apr 17 18:05:49 2023 +0800
+
+    Created FunctionA
+
+commit c3055607aa7eca6d3ddd46fe3c04becf9fb114a2
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Mon Apr 17 17:23:35 2023 +0800
+
+    added method "reserve_backorder()" in class FunctionC
+
+commit a54572aad875163d4469fcb297558f23b106cc57
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Mon Apr 17 16:20:08 2023 +0800
+
+    Created FunctionB
+
+commit d1c3f5ede95d5889529195f2c680ce1bc2403de9
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Mon Apr 17 15:42:55 2023 +0800
+
+    updated data members, constructors for FunctionB, FunctionC
+
+commit 5b1449bec0ba0d333aa19b1a9eb01949e33f13f1
+Author: fyl <ylfungad@connect.ust.hk>
+Date:   Mon Apr 17 12:40:14 2023 +0800
+
+    created class FunctionB, FunctionC
+
+commit 67b2c00a22ad38f15e64baeb8faff24a616c0f76
+Author: Hardy0611 <115974762+Hardy0611@users.noreply.github.com>
+Date:   Sun Apr 16 22:27:49 2023 +0800
+
+    Create README.md
+
+commit 097490659e77dee9cbad087e242b56cd9d82b475
+Author: Hardy0611 <hardy110602@gmail.com>
+Date:   Sun Apr 16 22:25:18 2023 +0800
+
+    Initial ppc1
