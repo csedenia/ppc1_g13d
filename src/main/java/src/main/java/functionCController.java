@@ -168,6 +168,7 @@ public class functionCController {
     	if (Input_checking.date_checking(input) == false) {	//check if Num_Week is valid
     		//Num_Week invalid, show error message
     		input_valid = false;
+    		Num_Week.setText("");
     	} else {
     		//Num_Week valid, convert into int
     		year = Integer.parseInt(input);
@@ -177,6 +178,7 @@ public class functionCController {
     	if (Input_checking.labor_capacity_checking(input) == false) {	//check if Cap_Labor is valid
     		//Cap_Labor invalid, show error message
     		input_valid = false;
+    		Cap_Labor.setText("");
     	} else {
     		//Cap_Labor valid, convert into int
     		lc = Integer.parseInt(input);
@@ -186,6 +188,7 @@ public class functionCController {
     	if (Input_checking.grape_capacity_checking(input) == false) {	//check if Cap_Labor is valid
     		//Cap_Grape invalid, show error message
     		input_valid = false;
+    		Cap_Grape.setText("");
     	} else {
     		//Cap_Labor valid, convert into int
     		gc = Integer.parseInt(input);
@@ -195,6 +198,7 @@ public class functionCController {
     	if (Input_checking.pr_checking(input) == false) {
     		//Prc_Rose invalid, show error message
     		input_valid = false;
+    		Prc_Rose.setText("");
     	} else {
     		//Prc_Rose valid, convert into float
     		pr = Float.parseFloat(input);
@@ -204,6 +208,7 @@ public class functionCController {
     	if(Input_checking.pn_checking(input) == false) {
     		//Prc_Noir invalid, show error message
     		input_valid = false;
+    		Prc_Noir.setText("");
     	} else {
     		//Prc_Noir valid, convert into float
     		pn = Float.parseFloat(input);
@@ -213,6 +218,7 @@ public class functionCController {
     	if(Input_checking.Rose_backOrder_checking(input) == false) {
     		//Bko_Rose invalid, show error message
     		input_valid = false;
+    		Bko_Rose.setText("");
     	} else {
     		//Bko_Rose valid, convert into int
     		br = Integer.parseInt(input);
@@ -222,13 +228,19 @@ public class functionCController {
     	if(Input_checking.Noir_backOrder_checking(input) == false) {
     		//Bko_Noir invalid, show error message
     		input_valid = false;
+    		Bko_Noir.setText("");
     	} else {
     		//Bko_Noir valid, convert into int
     		bn = Integer.parseInt(input);
     	}
     	
     	//terminate the process if any of the input is invalid
-    	if(input_valid == false) return;
+    	if(input_valid == false) {
+    		ObservableList<String> observer = FXCollections.observableArrayList();
+    		observer.add("Input invalid, Please input again!");
+    		or_scroll_text1.setValueFactory(new SpinnerValueFactory.ListSpinnerValueFactory<String>(observer));
+    		return;
+    	}
     	
     	//create function objects to calculate optimal mix
     	FunctionC c = new FunctionC(year, lc, gc, pr, pn, br, bn);

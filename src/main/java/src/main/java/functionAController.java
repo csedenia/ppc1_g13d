@@ -188,6 +188,7 @@ public class functionAController {
         if (Input_checking.labor_capacity_checking(input) == false) {	//check if Cap_Labor is valid
             //Cap_Labor invalid, show error message
             input_valid = false;
+            Cap_Labor.setText("");
         } else {
             //Cap_Labor valid, convert into int
             capLabour = Integer.parseInt(input);
@@ -197,6 +198,7 @@ public class functionAController {
         if (Input_checking.grape_capacity_checking(input) == false) {	//check if Cap_Grape is valid
             //Cap_Grape invalid, show error message
             input_valid = false;
+            Cap_Grape.setText("");
         } else {
             //Cap_Grape valid, convert into int
             capGrape = Integer.parseInt(input);
@@ -206,6 +208,7 @@ public class functionAController {
         if (Input_checking.numweek_checking(input) == false) {	//check if Num_Week is valid
             //Num_Week invalid, show error message
             input_valid = false;
+            Num_Week.setText("");
         } else {
             //Num_Week valid, convert into int
             numWeek = Integer.parseInt(input);
@@ -215,6 +218,7 @@ public class functionAController {
         if (Input_checking.pr_checking(input) == false) {	//check if Prc_Rose is valid
             //Prc_Rose invalid, show error message
             input_valid = false;
+            Prc_Rose.setText("");
         } else {
             //Prc_Rose valid, convert into int
             priceRose = Float.parseFloat(input);
@@ -224,6 +228,7 @@ public class functionAController {
         if (Input_checking.pr_checking(input) == false) {	//check if Prc_Noir is valid
             //Prc_Noir invalid, show error message
             input_valid = false;
+            Prc_Noir.setText("");
         } else {
             //Prc_Noir valid, convert into int
             priceNoir = Float.parseFloat(input);
@@ -233,12 +238,18 @@ public class functionAController {
         if (Input_checking.fixedCost_checking(input) == false) {	//check if Fixed_Costs is valid
             //Fixed_Costs invalid, show error message
             input_valid = false;
+            Fixed_Costs.setText("");
         } else {
             //Fixed_Costs valid, convert into int
             fixedCost = Integer.parseInt(input);
         }
 
-        if (input_valid == false) return;
+        if (input_valid == false) {
+        	ObservableList<String> observer = FXCollections.observableArrayList();
+    		observer.add("Input invalid, Please input again!");
+    		or_scroll_text1.setValueFactory(new SpinnerValueFactory.ListSpinnerValueFactory<String>(observer));
+        	return;
+        }
 
         FunctionA objectA = new FunctionA(numWeek, capLabour, capGrape, priceRose, priceNoir, fixedCost);
         objectA.calculateGrossProfit();
