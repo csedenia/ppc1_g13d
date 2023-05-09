@@ -18,6 +18,7 @@ public class Input_checking {
 				return true;
 			}
 			else {
+				System.out.println("Input date should in range 2301 to 2315");
 				return false;
 			}
 		}
@@ -34,8 +35,14 @@ public class Input_checking {
 	 */
 	public static boolean labor_capacity_checking(String input) { // for function A B C
 		try {
-			Integer.parseInt(input);
-			return true;
+			int int_num = Integer.parseInt(input);
+			if(int_num < 0) {
+				System.out.println("Input capacity is not a valid positive integer.");
+				return false;
+			}
+			else {
+				return true;
+			}
 		}
 		catch(NumberFormatException e){
 			System.out.println("Input labor capacity is not a valid integer.");
@@ -50,8 +57,14 @@ public class Input_checking {
 	 */
 	public static boolean grape_capacity_checking(String input) { // for function A B C
 		try {
-			Integer.parseInt(input);
-			return true;
+			int int_num = Integer.parseInt(input);
+			if(int_num < 0) {
+				System.out.println("Input capacity is not a valid positive integer.");
+				return false;
+			}
+			else {
+				return true;
+			}
 		}
 		catch(NumberFormatException e){
 			System.out.println("Input grape capacity is not a valid integer.");
@@ -66,8 +79,14 @@ public class Input_checking {
 	 */
 	public static boolean pr_checking(String input) { // for function A B C
 		try {
-			Float.parseFloat(input);
-			return true;
+			float float_num = Float.parseFloat(input);
+			if(float_num < 0) {
+				System.out.println("Input price is not a valid positive integer.");
+				return false;
+			}
+			else {
+				return true;
+			}
 		}
 		catch(NumberFormatException e){
 			System.out.println("Input price of rose is not a valid float.");
@@ -82,8 +101,14 @@ public class Input_checking {
 	 */
 	public static boolean pn_checking(String input) { // for function A B C
 		try {
-			Float.parseFloat(input);
-			return true;
+			float float_num = Float.parseFloat(input);
+			if(float_num < 0) {
+				System.out.println("Input price is not a valid positive integer.");
+				return false;
+			}
+			else {
+				return true;
+			}
 		}
 		catch(NumberFormatException e){
 			System.out.println("Input price of noir is not a valid float.");
@@ -103,6 +128,7 @@ public class Input_checking {
 				return true;
 			}
 			else {
+				System.out.println("Input number of week should in range 1-15.");
 				return false;
 			}
 		}
@@ -119,8 +145,14 @@ public class Input_checking {
 	 */
 	public static boolean fixedCost_checking(String input) { // for function A
 		try {
-			Integer.parseInt(input);
-			return true;
+			int int_num = Integer.parseInt(input);
+			if(int_num < 0) {
+				System.out.println("Input fixed cost is not a valid positive integer.");
+				return false;
+			}
+			else {
+				return true;
+			}
 		}
 		catch(NumberFormatException e){
 			System.out.println("Input fixed cost is not a valid integer.");
@@ -135,11 +167,17 @@ public class Input_checking {
 	 */
 	public static boolean Rose_backOrder_checking(String input) { // for function C
 		try {
-			Integer.parseInt(input);
-			return true;
+			int int_num = Integer.parseInt(input);
+			if(int_num < 0) {
+				System.out.println("Input backorder is not a valid positive integer.");
+				return false;
+			}
+			else {
+				return true;
+			}
 		}
 		catch(NumberFormatException e){
-			System.out.println("Input fixed cost is not a valid integer.");
+			System.out.println("Input backorder is not a valid integer.");
 			return false;
 		}
 	}
@@ -151,11 +189,17 @@ public class Input_checking {
 	 */
 	public static boolean Noir_backOrder_checking(String input) { // for function C
 		try {
-			Integer.parseInt(input);
-			return true;
+			int int_num = Integer.parseInt(input);
+			if(int_num < 0) {
+				System.out.println("Input backorder is not a valid positive integer.");
+				return false;
+			}
+			else {
+				return true;
+			}
 		}
 		catch(NumberFormatException e){
-			System.out.println("Input fixed cost is not a valid integer.");
+			System.out.println("Input backorder is not a valid integer.");
 			return false;
 		}
 	}
